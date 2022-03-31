@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  padding: 2em 2.5em 1em 24.5em;
+  padding: 3.5em 2.5em 1em 24.5em;
     
   color: #333;
 
@@ -73,7 +73,7 @@ hr {
   background: rgb(246,246,246);
   background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(68,68,68,1) 0%);   
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 0;
   width: 18em;
   height: 100%;
@@ -85,14 +85,13 @@ hr {
 
 #content {
   display: block;
-  border: 2px solid black;
-  
-
-  
+  border: 2px solid black;  
 }
+
 .top {
   margin: auto;
 }
+
 .top p {
   font-size: smaller;
   text-align: justify;
@@ -346,6 +345,7 @@ li {
   section {
     padding: 1.2em .6em .6em;
   }
+  
 }
 
 @media print {
@@ -375,13 +375,60 @@ li {
   
 }
 
-#techs li {
-  list-style: none;
+#divlista {
+  margin-top: 20px;
+  width: 100%; 
 }
 
-#techs{
-  font-size: medium;
+#techs li {
+  font-size: small;
+  width: 90%;
+  list-style: none;
+  padding: 5px;
+  text-align: left;
+  
+}
+
+#techs {
+ 
   margin: 0;
 }
+
+#header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  background: rgb(246,246,246);
+  background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(68,68,68,1) 0%);
+  color: #eee;
+  position: fixed;
+  left: 0;
+  top: 0;
+  
+}
+
+#header ul {
+  top: 0;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  text-align: right;
+  right: 0;
+  margin-left: 10%;
+}
+
+#header ul li{
+  text-align: left;
+  width: 20%;
+  list-style: none;
+  padding: 10px;
+}
+
+#header ul li a {
+  text-decoration: none;
+  color: #eee;
+}
+
+
 
 

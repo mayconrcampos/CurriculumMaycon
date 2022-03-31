@@ -45,6 +45,15 @@
 
 	</div>
 
+	<div id="header">
+		<ul>
+			<li><a href="#content">Sobre</a></li>
+			<li><a href="#experiencia">Experiências</a></li>
+			<li><a href="#graduacao">Graduação</a></li>
+			<li><a href="#cursosExtras">Cursos Extra Curriculares</a></li>
+		</ul>
+	</div>
+
 
 
 	<p id="content">
@@ -61,9 +70,12 @@
 
 			 <p>Desde então venho estudando e adquirindo conhecimentos por meio da Universidade Unicesumar e também por vários outros cursos, tanto gratuitos como pagos, onde foram estudadas diversas linguagens de programação e tecnologias, entre as quais:</p>
 
-			 <ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
-				 <li><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
-			 </ul>
+			 <div id="divlista">
+				<ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
+					<li :style="chave % 2 == 0 ? 'background-color: darkgray;' : 'background-color: #eee;'"><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
+				</ul>
+			 </div>
+			 
 			 
 		</section>
 		
@@ -187,11 +199,43 @@
 			<br><br>
 
 			<hr>
+
+
+			<h3>Projeto OS Fácil v3.0</h3>
+			
+			<span class="dates">Agosto 2020 &ndash; Setembro 2020</span>
+
+			<h4>Descrição do projeto</h4>
+			<p>Este programa foi a evolução das duas primeiras versões OS Fácil.</p>
+			<p>Assim como na segunda versão, esta foi reescrita do zero, mas desta vez utilizando a biblioteca gráfica GTK3 e seu construtor de interfaces sensacional chamado Glade. O programa continuou contando com banco de dados SQlite3 e o gerador de PDF pra impressão das Ordens de Serviço.</p>
+			<div id="IMGs02">
+				<a target="_blank" href="./img/OSFacilV3-01.jpg"><img src="./img/OSFacilV3-01.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-02.jpg"><img src="./img/OSFacilV3-02.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-03.jpg"><img src="./img/OSFacilV3-03.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-04.jpg"><img src="./img/OSFacilV3-04.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-05.jpg"><img src="./img/OSFacilV3-05.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-06.jpg"><img src="./img/OSFacilV3-06.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-07.jpg"><img src="./img/OSFacilV3-07.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-08.jpg"><img src="./img/OSFacilV3-08.jpg" alt="OSFácilV3"></a>
+			</div>
+			<ul>
+				<h4>Tecnologias Utilizadas</h4><br>
+				<li>Paradigma: POO</li>
+				<li>Linguagem: Python 3.8.5 64bits</li>
+				<li>Banco de Dados: SQlite3</li>
+				<li>Biblioteca gráfica: GTK3</li>
+				<li>Construtor de Interface: Glade 3.36</li>
+				<li>Gerador de PDF: Biblioteca Reportlab</li>
+				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v3" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+			</ul>
+			<br><br>
+
+			<hr>
 		</section>
 	
 		
 
-		<section>
+		<section id="graduacao">
 			<h3>Education & Credential</h3>
 			<h4><a class="link" href="https://www.neiu.edu" target="_blank">Northeastern Illinois University</a></h4>
 			<span>Bachelor of Arts, Physical Education, Cum Laude</span><br />
@@ -207,11 +251,11 @@
 
 			<h4 style="margin-top: 1px; text-decoration: underline;"><i>ODL QC, 120-Hour TEFL Certificate #2016895</i></h4>
 			<h4 style="margin-top: 1px; text-decoration:underline"><i>PDA, Ceritified Positive Dicipline Facilitator		</i></h4>
-
+		<hr />
 		</section>
 
-		<hr />
-		<section>
+		
+		<section id="cursosExtras">
 			<h3>Professsional Development and Skills</h3>
 			<p>2019 Posiitive Dicipline Association, <i>Certified Positive Dicipline Facilitator</i></br>
 				2018 EARCOS, <i>Unpacking Inclusion</i></br> 
