@@ -2,11 +2,10 @@ export default Vue.createApp({
     data() {
       return {
         nome: 'Maycon R. Campos',
-		idade: "",
-		universidade: "Centro Universitário Cesumar - Unicesumar",
-        tecnologias: ["Python", "Linguagem C", "Linguagem C++", "Java", "PHP", "Javascript", "HTML", "CSS", "Servidor Apache", "Bootstrap", "MySQL", "SQLite", "VueJS", "Paradigma Estruturado", "Programação Orientada a Objetos", "Estruturas de Dados", "API's Rest", "Versionamento Git", "Github", "Linux", "continua..."],
+		    idade: "",
+		    universidade: "Centro Universitário Cesumar - Unicesumar",
+        tecnologias: ["Python", "Linguagem C", "Linguagem C++", "Java", "PHP", "Javascript", "HTML", "CSS", "Servidor Apache", "Bootstrap",  "MySQL", "SQLite", "VueJS", "Paradigma Estruturado", "Programação Orientada a Objetos", "Estruturas de Dados", "API's Rest", "Versionamento Git", "Github", "Linux", "continua..."],
         atribuicoesEstagio: ["Auxílio no atendimento de tickets junto ao sistema de chamados", "Auxílio na orçamentação para composição de Termos de Referência", "Auxílio nas atividades administrativas relativas à processos de compra, garantia e recebimento de mercadorias", "Auxílio na manutenção em computadores (backup, formatação, instalação de softwares, limpeza externa/interna, troca de teclado, mouse, cabo de rede, cabo de energia, montagem e configuração de um segundo monitor, instalação de projetor e outros periféricos)", "Auxílio no atendimento quanto ao uso das impressoras (atolamento de papel, troca de toner, orientação para impressão em formatos diferentes)",  "Auxílio na conferência de estoque"],
-        tamanhoIMG: "100%"
 
       }
     },
@@ -18,13 +17,8 @@ export default Vue.createApp({
 
         this.idade = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365))
       },
-      aumentar(){
-        if(this.tamanhoIMG == "100%"){
-          this.tamanhoIMG = "200%"
-        }else{
-          this.tamanhoIMG = "100%"
-        }
-      }
+      
+      
     },
     created(){
       this.calculaIdade()

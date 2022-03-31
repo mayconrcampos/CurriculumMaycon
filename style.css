@@ -6,7 +6,8 @@ html {
 
 body {
   padding: 2em 2.5em 1em 24.5em;
-  background-color: #fff;
+  background: rgb(246,246,246);
+  background: linear-gradient(90deg, rgba(246,246,246,1) 92%, rgba(68,68,68,1) 100%);  
   color: #333;
 }
 
@@ -33,12 +34,14 @@ a:hover {
 hr {
   border: 0;
   height: 1px;
-  background-color: #eee;
+  background-color: darkgrey;
   max-width: 35em;
   margin-left: 0;
 }
 
 #sidebar { 
+  background: rgb(246,246,246);
+  background: linear-gradient(90deg, rgba(246,246,246,1) 67%, rgba(173,173,173,1) 100%); 
   position: fixed;
   top: 0;
   left: 0;
@@ -63,12 +66,25 @@ hr {
   text-align: justify;
 }
 
+#experiencia .creditosSistemaPortaria {
+  font-size: x-small;
+}
+
 #experiencia #imgsistemaportaria:hover {
   box-shadow: 5px 5px 50px darkgray;
 }
 
-#experiencia #imgsistemaportaria {
+#experiencia #linkimg {
+  display: block;
   width: 100%;
+
+}
+
+#experiencia #linkimg #imgsistemaportaria {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  border: 2px solid black;
 }
 
 #box {
@@ -85,7 +101,7 @@ hr {
   overflow: visible;
 }
 img.headshot:hover {
-  box-shadow: 10px 10px 20px lightgrey;
+  box-shadow: 10px 10px 20px black;
   
 }
 
@@ -249,6 +265,7 @@ li {
 @media only screen and (max-width:800px) {
   body {
     padding: 0 0 1em;
+    
   }
   #sidebar {
     border-right: none;
@@ -272,6 +289,7 @@ li {
 
   body {
     padding-bottom: 2em;
+    
   }
   section {
     padding: 1.2em .6em .6em;
@@ -313,4 +331,5 @@ li {
   font-size: medium;
   margin: 0;
 }
+
 
