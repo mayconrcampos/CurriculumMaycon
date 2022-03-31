@@ -14,6 +14,8 @@ body {
   font-family: open sans, sans-serif;
 }
 
+
+
 p {
   line-height: 1.6em;
 }
@@ -51,10 +53,23 @@ hr {
   display: block;
   
 }
-#content .top p {
-  font-size: small;
+.top p {
+  font-size: smaller;
+  text-align: justify;
 }
 
+#experiencia p {
+  font-size: smaller;
+  text-align: justify;
+}
+
+#experiencia #imgsistemaportaria:hover {
+  box-shadow: 5px 5px 50px darkgray;
+}
+
+#experiencia #imgsistemaportaria {
+  width: 100%;
+}
 
 #box {
   margin: auto;
