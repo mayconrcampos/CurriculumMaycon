@@ -6,24 +6,54 @@ html {
 
 body {
   padding: 2em 2.5em 1em 24.5em;
-  background: rgb(246,246,246);
-  background: linear-gradient(90deg, rgba(246,246,246,1) 92%, rgba(68,68,68,1) 100%);  
+    
   color: #333;
+
 }
 
 body {
   font-family: open sans, sans-serif;
 }
 
+#IMGs01 {
+  display: inline-flex;
+  width: 100%;
+}
+#IMGs01 a {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#IMGs01 a img{
+  width: 150px;
+}
 
+#IMGs02 {
+  display: flexbox;
+  flex-direction: row;
+  width: 100%;
+}
+
+#IMGs02 a {
+  width: 33%;
+  margin: auto;
+}
+
+#IMGs02 a img {
+  width: 150px;
+}
 
 p {
   line-height: 1.6em;
 }
 
 a, a:visited, a:hover {
-  color: #333;
+  color: gray;
   font-weight: 600;
+}
+
+#experiencia ul li a {
+  color: dimgray;
 }
 
 a:hover {
@@ -41,7 +71,7 @@ hr {
 
 #sidebar { 
   background: rgb(246,246,246);
-  background: linear-gradient(90deg, rgba(246,246,246,1) 67%, rgba(173,173,173,1) 100%); 
+  background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(68,68,68,1) 0%);   
   position: fixed;
   top: 0;
   left: 0;
@@ -50,41 +80,63 @@ hr {
   padding: 2.5em 2em 2em;
   overflow: visible;
   border-right: 1px solid #eee;
+  color: whitesmoke;
 }
 
 #content {
   display: block;
+  border: 2px solid black;
   
+
+  
+}
+.top {
+  margin: auto;
 }
 .top p {
   font-size: smaller;
   text-align: justify;
+  margin: auto;
+}
+
+#experiencia {
+  margin: auto;
 }
 
 #experiencia p {
   font-size: smaller;
   text-align: justify;
+  
 }
 
-#experiencia .creditosSistemaPortaria {
+#projetos .creditosSistemaPortaria {
   font-size: x-small;
 }
 
-#experiencia #imgsistemaportaria:hover {
+#projetos #imgsistemaportaria:hover {
   box-shadow: 5px 5px 50px darkgray;
 }
 
-#experiencia #linkimg {
+#projetos #linkimg {
   display: block;
   width: 100%;
 
 }
 
-#experiencia #linkimg #imgsistemaportaria {
+#projetos #linkimg #imgsistemaportaria {
   display: flex;
   width: 40%;
   margin: auto;
   border: 2px solid black;
+}
+
+#projetos {
+  margin: auto;
+}
+
+#projetos p{
+  font-size: smaller;
+  text-align: justify;
 }
 
 #box {

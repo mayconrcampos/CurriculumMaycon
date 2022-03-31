@@ -49,7 +49,7 @@
 
 	<p id="content">
 		<section class="top">
-  			<h3 id="sobre">Sobre mim</h2>
+  			<h3 id="sobre">Sobre mim</h3>
 				<br>
 			<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de Imbituba - SC desde 2015.</p>
 			<p>Apesar de sempre ter sido ligado à tecnologia utilizando e explorando computadores desde a pré-adolescência, decidi dar o primeiro passo e iniciei meus estudos pra valer em tecnologia no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi ao assistir as aulas fantásticas do canal <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no Youtube, com o curso de Python Fundamentos (Módulos 1, 2 e 3) do prof. Gustavo Guanabara.</p>
@@ -64,12 +64,13 @@
 			 <ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
 				 <li><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
 			 </ul>
-
+			 
 		</section>
-		<hr/>
+		
 
 
 		<section id="experiencia">
+			<hr/>
 			<h3>Experiência no ramo de T.I</h3>
 			<br>
 			
@@ -85,9 +86,10 @@
 			</ul>
 
 			<hr>
-
-			<h4>Projeto de Estágio - Controle de Entrada e Saída de Veículos</h4>
-				<a class="link" href="https://github.com/mayconrcampos/SistemaPortaria" target="_blank"><i class="fa fa-github"></i> Github Projeto</a><br />
+		</section>
+		<section id="projetos">
+			<h3>Projeto de Estágio - Controle de Entrada e Saída de Veículos</h3>
+				
 				<span class="dates">Julho de 2021 &ndash; Agosto de 2021</span>
 				<!-- <p class="details">Tickermachine is a proprietary algorithmic trading firm specializing in cryptocurrencies, forex, and ETFs. We use low-frequency long-only strategies based on technical analysis and behavioral economics principles.</p> -->
 			
@@ -106,79 +108,88 @@
 					<li>Bootstrap 4</li>
 					<li>CSS 3</li>
 					<li>Banco de Dados MySQL</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/SistemaPortaria" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
 				</ul>
+				<br><br>
 
 			<hr>
 
-			<h3>Projetos Pessoais</h3>
+			<h3>Projetos Pessoais</h3><br>
 
-			<h4>Projeto OS Fácil v1.0</h4>
-			<a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v1" target="_blank"><i class="fa fa-github"></i> Github Projeto</a><br />
+			<h3>Projeto OS Fácil v1.0</h3>
+			
 			<span class="dates">Março 2020 &ndash; Abril 2020</span>
 
 			<h4>Descrição do projeto</h4>
 			<p>Este pequeno projeto infelizmente não possuo o print da tela, mas felizmente não tinha muito o que mostrar, pois ele funcionava em um Menu em Loop infinito pelo terminal. O programa foi batizado de OS Fácil por ter me servido para resolver um problema real de meu dia a dia. Eu tinha uma estamparia de sublimação e nas épocas de movimento, quando surgiam muitas ordens de serviço, todas as anotações eram feitas em papel, e muitas informações se perdiam.</p>
 			<p>Então foi aí que tive a ideia de escrever este programa em Python pra rodar pelo terminal e utilizando como bancos de dados o SQlite3.</p>
 			<ul>
-				<h4>Tecnologias Utilizadas</h4>
+				<h4>Tecnologias Utilizadas</h4><br>
 				<li>Paradigma: Estruturado</li>
 				<li>Linguagem: Python</li>
 				<li>Banco de Dados: SQlite3</li>
 				<li>Gerava arquivos TXT's com a Ordem de Serviço para impressão.</li>
-			</ul>
+				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v1" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+			</ul> <br><br>
 
 			<hr>
 			
 
-			<h4>ESL Teacher</h4>
-			<a class="link" href="https://www.hldes.tc.edu.tw/home" target="_blank">Huludun Elementary School, Taiwan</a><br />
-			<span class="dates">August 2011 &ndash; June 2013</span>
-			<ul>
-				<li>Routinely plan and coordinate with co-teachers daily lesson plans across all primary grade levels</li>
-				<li>Generate fun and instructional Power Points, worksheets, and activities to have a variety of means for students to practice and learn English vocabulary and grammar.</li>
-				<li>Assist with the preparation for the Taichung English Song Competition- 2nd Place</li>
-				<li>Coach and train students for the Taichung Speech Competition </li>
-			</ul>
-	
-			<h4>ESL Teacher</h4>
-			<a class="link" href="https://www.hldes.tc.edu.tw/home" target="_blank">Daecheon Girls' Middle School, South Korea</a><br />
-			<span class="dates">August 2010 &ndash; June 2011</span>
-			<ul>
-				<li>Designed and implemented hands-on and appealing lessons to supplement the English textbook content to appropriate age groups</li>
-				<li>Maintain interests of students while engaging them in English language production</li>
-				<li>Coach students for provincial wide Enlglish competitions such as the Speech Competition, Drama's Theatre and Debate </li>
-			</ul>
+			<h3>Projeto OS Fácil v2.0</h3>
+			
+			<span class="dates">Junho 2020 &ndash; Junho 2020</span>
 
-			<h4>Director of Sports and Adventure Camp/ Assistant to Preschool Camp</h4>
-			<a class="link" href="https://saltcreek.multisportsystems.com/page/show/6810-home" target="_blank">Salt Creek Rural Park Disctict, Palatine IL, USA</a><br />
-			<span class="dates">Summer 2010</span>
+			<h4>Descrição do projeto</h4>
+			<p>Esta foi a segunda versão do OSFácil, mas desta vez utilizando interface gráfica com a biblioteca padrão de Python, Tkinter. O programa seguiu os mesmos princípios da primeira versão, mas melhorado.</p>
+			<div id="IMGs01">
+				<a target="_blank" href="./img/OsFacilv2.jpg"><img src="./img/OsFacilv2.jpg" alt="OSFácilV2"></a>
+				<a target="_blank" href="./img/OsFacilv2-01.jpg"><img src="./img/OsFacilv2-01.jpg" alt="OSFácilV3"></a>
+			</div>
 			<ul>
-				<li>Supervised and trained all new camp counselors</li>
-				<li>Communicated daily with parents</li>
-				<li>Created, setup and evaluated all daily acitivites and games</li>
-				<li>Coordinated and secured all outside field trips</li>
+				<h4>Tecnologias Utilizadas</h4><br>
+				<li>Paradigma: POO</li>
+				<li>Linguagem: Python</li>
+				<li>Banco de Dados: SQlite3</li>
+				<li>Gerava arquivos PDF para impressão das Ordens de Serviço. (Biblioteca: Reportlab)</li>
+				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-OS-Facil-v2" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
 			</ul>
+			<br><br>
 
-			<h4>At-Risk Preschool Assistant</h4><a class="link" href="https://ardmore.asd4.org" target="_blank">Ardmore Elementary School, Addison IL, USA</a><br />
-			<span class="dates">August 2009 &ndash; June 2010</span>
+			<hr>
+
+			<h3>Projeto OS Fácil v3.0</h3>
+			
+			<span class="dates">Agosto 2020 &ndash; Setembro 2020</span>
+
+			<h4>Descrição do projeto</h4>
+			<p>Este programa foi a evolução das duas primeiras versões OS Fácil.</p>
+			<p>Assim como na segunda versão, esta foi reescrita do zero, mas desta vez utilizando a biblioteca gráfica GTK3 e seu construtor de interfaces sensacional chamado Glade. O programa continuou contando com banco de dados SQlite3 e o gerador de PDF pra impressão das Ordens de Serviço.</p>
+			<div id="IMGs02">
+				<a target="_blank" href="./img/OSFacilV3-01.jpg"><img src="./img/OSFacilV3-01.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-02.jpg"><img src="./img/OSFacilV3-02.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-03.jpg"><img src="./img/OSFacilV3-03.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-04.jpg"><img src="./img/OSFacilV3-04.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-05.jpg"><img src="./img/OSFacilV3-05.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-06.jpg"><img src="./img/OSFacilV3-06.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-07.jpg"><img src="./img/OSFacilV3-07.jpg" alt="OSFácilV3"></a>
+				<a target="_blank" href="./img/OSFacilV3-08.jpg"><img src="./img/OSFacilV3-08.jpg" alt="OSFácilV3"></a>
+			</div>
 			<ul>
-				<li>Assist classroom teacher with all activites for at-risk students, including 1:1 and small group academic support, find and gross morot acitivites and social/emotional development</li>
-				<li>Independently facilitate learning centers that include literacy, math and functional management plans</li>
-				<li>Provide consistency and structure of daily acitivities while incorporating behavior management plans</li>
-				<li>Supervise classroom independently during meal times, bathroom, outdoor play, etc.</li>
+				<h4>Tecnologias Utilizadas</h4><br>
+				<li>Paradigma: POO</li>
+				<li>Linguagem: Python 3.8.5 64bits</li>
+				<li>Banco de Dados: SQlite3</li>
+				<li>Biblioteca gráfica: GTK3</li>
+				<li>Construtor de Interface: Glade 3.36</li>
+				<li>Gerador de PDF: Biblioteca Reportlab</li>
+				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v3" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
 			</ul>
-	
-			<h4>Student Teaching</h4><a class="link" href="https://www.d15.org/parkland" target="_blank">Parkland Middles School, McHenry IL, USA</a><br />
-			<span class="dates">August 2009 &ndash; June 2010</span>
-			<ul>
-				<li>Design and conduct small and large group lessons for grades 6-8 P.E. classes under the supervision of mentor teacher</li>
-				<li>Participate in curriculum planning with mentor teacher</li>
-				<li>Develop and present units related to specific sports and health</li>
-				<li>Differentiate and adapt indsturction for students with special needs</li>
-			</ul>
+			<br><br>
+
+			<hr>
 		</section>
 	
-		<hr/>
+		
 
 		<section>
 			<h3>Education & Credential</h3>
