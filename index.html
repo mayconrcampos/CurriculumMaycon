@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-BR">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maycon R Campos | DEV FullStack</title>
 
 <link rel="icon" href="jsisonfot.jpg">
@@ -16,7 +17,7 @@
 
 
 <body>
-<div id="apepe">
+<div id="CV">
 	<div id="sidebar">
 			<div class="header">
 	  			<div class="progress-container">
@@ -26,20 +27,21 @@
 		<img class="headshot" src="./img/maycon.jpg" />
 		<h1>{{ nome }}</h1>
 		<h2>DEV FullStack em Formação - SENAI DEVinHouse[ConectaNuvem]</h2>
-<!-- <p class="lead">Co-Founder at <a href="https://codefordemocracy.org" target="_blank">Code for Democracy</a>. Founder at <a href="https://tickermachine.com" target="_blank">Tickermachine</a>.</p> -->
+
 		<ul id="icons">
 			<!---<li><a href="qrcode.jpg" target="_blank"><i class="fa fa-wechat " ></i></a></li>---->
 			<!-- <li><a href="http://github.com/kathyqian" target="_blank"><i class="fa fa-github-square"></i></a></li> -->
 			<li><a href="https://www.linkedin.com/in/mayconrcampos/" target="_blank"> <i class="fa fa-linkedin-square"></i></a></li>
 			<!-- <li><a href="http://instagram.com/kathyqian" target="_blank"><i class="fa fa-instagram"></i></a></li> -->
-			<li><a target="_blank" href="mailto:maycon.campos@gmail.com"> <i class="fa fa-envelope-square"></i></a></li>
+			<li><a target="_blank" href="mailto:maycon.campos@gmail.com"> <i class="fa fa-envelope"></i></a></li>
 
-			<li><a target="_blank" href="https://github.com/mayconrcampos"> <i class="fa fa-github fa-xs"></i></a></li>
+			<li><a target="_blank" href="https://github.com/mayconrcampos"> <i class="fa fa-github-square fa-xs"></i></a></li>
 
 			<li><a target="_blank" href="https://whats.link/5548984443857"> <i class="fa fa-whatsapp fa-xs"></i></a></li>
 
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i> Imbituba - SC, Brasil</p>
+
 
 	</div>
 
@@ -47,172 +49,141 @@
 
 	<p id="content">
 		<section class="top">
-  			<h3>Sobre mim</h2>
-		<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e, atualmente moro na cidade de Imbituba - SC desde 2015.</p>
-		<p>Iniciei meus estudos em tecnologia pra valer no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi no canal do Youtube <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no curso de Python Fundamentos (Módulos 1, 2 e 3).</p>
+  			<h3 id="sobre">Sobre mim</h2>
+				<br>
+		<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de Imbituba - SC desde 2015.</p>
+		<p>Apesar de sempre ter sido ligado à tecnologia e utilizar computadores desde pré-adolescente, iniciei meus estudos pra valer em tecnologia no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi no canal do Youtube <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no curso de Python Fundamentos (Módulos 1, 2 e 3).</p>
 
  		<p>No início de 2020 iniciei meu curso Superior em Análise e Desenvolvimento de Sistemas, pela <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Previsão para formatura será para Agosto/2022.</p>
 
 		 <p>De lá para cá venho estudando por meio da Universidade e também por vários cursos, tanto gratuitos como pagos, onde são abordadas várias linguagens e tecnologias as quais fui adquirindo conhecimento, são elas:</p>
 
-		 <ul class="techs" v-for="(item, chave) in tecnologias" :key="chave">
-			 <li>{{ item }}</li>
+		 <ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
+			 <li><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
 		 </ul>
 
 
   
 		</section>
-	<hr />
-<section>
-<h3>Experiência no ramo de T.I</h3>
-<br>
-<h3 class="summary">Estágio de Suporte em T.I</h3><br>
+		<hr/>
+		<section>
+			<h3 id="experiencia">Experiência no ramo de T.I</h3>
+			<br>
+			<h2 class="summary">Estágio de Suporte em T.I</h2><br>
 
-<a class="link" target="_blank" href="https://portodeimbituba.com.br/">SCPar - Porto de Imbituba</a><br />
-<span class="dates">Maio de 2021 &ndash; Presente</span>
-	<ul v-for="(item, key) in atribuicoesEstagio">
-		<li>{{ item }}</li>
-	</ul>
+			<a class="link" target="_blank" href="https://portodeimbituba.com.br/">SCPar - Porto de Imbituba</a><br />
+			<span class="dates">Maio de 2021 &ndash; Presente</span>
+			<h5>Atribuições do cargo:</h5>
+			<ul v-for="(item, key) in atribuicoesEstagio">
+				<li>{{ item }}</li>
+			</ul>
 
-<h4>Year 1 English Homeroom/ ICT Teacher</h4>
-<a class="link" href="https://www.hdschools.org/en" target="_blank">Shanghai HD Bilingual School, China</a><br />
-<span class="dates">August 2016 &ndash; June 2018</span>
-<!-- <p class="details">Tickermachine is a proprietary algorithmic trading firm specializing in cryptocurrencies, forex, and ETFs. We use low-frequency long-only strategies based on technical analysis and behavioral economics principles.</p> -->
-<ul>
-	<li>Teach English and Science curriculums based on Cambridge International Framework</li>
-	<li>Employ assessment tools including AFL, Reading Running Records and First Steps Writing Continuum to improve instruction methods</li>
-	<li>Coordinate Team Sports across the Grade 1 cohort team
-</li>
-<li>Provided fundamental programming along computer applications to all upper primary classes and lead in developing the curriuclum 
-</li>
-	</ul>
-	<h4>Year 1 English Homeroom Teacher</h4>
-<a class="link" href="http://www.chjhs.tp.edu.tw/dispPageBox/ENGCP.aspx?ddsPageID=ENGABOUT_MIS" target="_blank">Chingshin Bilingual School, Taiwan</a><br />
-<span class="dates">August 2013 &ndash; June 2016</span>
-<ul>
-	<li>Taught English as well as core subjects using the McGraw Hill Treasures program
-</li>
-	<li>Design and implement Grade 2 English mathematic curriculum that supports the current Chinese mathematic curriculum</li>
-	<li>Monitor student progress using a variety of formative assessments which also help to drive my instruction</li>
-	<li>Evaluat student learning at the end of each instructional unit by using a variety of summative assessments</li>
-	<li>Keep in constant communication with parents to encourage household knowledge of the curriculum and comment on their child’s well-being</li>
-	</ul>
+			<h4>Year 1 English Homeroom/ ICT Teacher</h4>
+				<a class="link" href="https://www.hdschools.org/en" target="_blank">Shanghai HD Bilingual School, China</a><br />
+				<span class="dates">August 2016 &ndash; June 2018</span>
+				<!-- <p class="details">Tickermachine is a proprietary algorithmic trading firm specializing in cryptocurrencies, forex, and ETFs. We use low-frequency long-only strategies based on technical analysis and behavioral economics principles.</p> -->
+			<ul>
+				<li>Teach English and Science curriculums based on Cambridge International Framework</li>
+				<li>Employ assessment tools including AFL, Reading Running Records and First Steps Writing Continuum to improve instruction methods</li>
+				<li>Coordinate Team Sports across the Grade 1 cohort team</li>
+				<li>Provided fundamental programming along computer applications to all upper primary classes and lead in developing the curriuclum </li>
+			</ul>
+			<h4>Year 1 English Homeroom Teacher</h4>
+			<a class="link" href="http://www.chjhs.tp.edu.tw/dispPageBox/ENGCP.aspx?ddsPageID=ENGABOUT_MIS" target="_blank">Chingshin Bilingual School, Taiwan</a><br />
+			<span class="dates">August 2013 &ndash; June 2016</span>
+			<ul>
+				<li>Taught English as well as core subjects using the McGraw Hill Treasures program</li>
+				<li>Design and implement Grade 2 English mathematic curriculum that supports the current Chinese mathematic curriculum</li>
+				<li>Monitor student progress using a variety of formative assessments which also help to drive my instruction</li>
+				<li>Evaluat student learning at the end of each instructional unit by using a variety of summative assessments</li>
+				<li>Keep in constant communication with parents to encourage household knowledge of the curriculum and comment on their child’s well-being</li>
+			</ul>
+			
 
-
-	<h4>ESL Teacher</h4>
-<a class="link" href="https://www.hldes.tc.edu.tw/home" target="_blank">Huludun Elementary School, Taiwan</a><br />
-<span class="dates">August 2011 &ndash; June 2013</span>
-<ul>
-	<li>Routinely plan and coordinate with co-teachers daily lesson plans across all primary grade levels
-
-</li>
-<li>Generate fun and instructional Power Points, worksheets, and activities to have a variety of means for students to practice and learn English vocabulary and grammar.
-</li>
-	<li>Assist with the preparation for the Taichung English Song Competition- 2nd Place
-</li>
-	<li>Coach and train students for the Taichung Speech Competition 
-</li>
-	</ul>
-	<h4>ESL Teacher</h4>
-<a class="link" href="https://www.hldes.tc.edu.tw/home" target="_blank">Daecheon Girls' Middle School, South Korea</a><br />
-<span class="dates">August 2010 &ndash; June 2011</span>
-<ul>
-	<li>Designed and implemented hands-on and appealing lessons to supplement the English textbook content to appropriate age groups</li>
-	<li>Maintain interests of students while engaging them in English language production</li>
-	<li>Coach students for provincial wide Enlglish competitions such as the Speech Competition, Drama's Theatre and Debate </li>
-	</ul>
-
-	<h4>Director of Sports and Adventure Camp/ Assistant to Preschool Camp</h4>
-<a class="link" href="https://saltcreek.multisportsystems.com/page/show/6810-home" target="_blank">Salt Creek Rural Park Disctict, Palatine IL, USA</a><br />
-<span class="dates">Summer 2010</span>
-<ul>
-	<li>Supervised and trained all new camp counselors</li>
-	<li>Communicated daily with parents</li>
-	<li>Created, setup and evaluated all daily acitivites and games</li>
-	<li>Coordinated and secured all outside field trips</li>
-	</ul>
-
-	<h4>At-Risk Preschool Assistant</h4><a class="link" href="https://ardmore.asd4.org" target="_blank">Ardmore Elementary School, Addison IL, USA</a><br />
-<span class="dates">August 2009 &ndash; June 2010</span>
-<ul>
-	<li>Assist classroom teacher with all activites for at-risk students, including 1:1 and small group academic support, find and gross morot acitivites and social/emotional development</li>
-	<li>Independently facilitate learning centers that include literacy, math and functional management plans</li>
-	<li>Provide consistency and structure of daily acitivities while incorporating behavior management plans</li>
-	<li>Supervise classroom independently during meal times, bathroom, outdoor play, etc.</li>
-	</ul>
-	<h4>Student Teaching</h4><a class="link" href="https://www.d15.org/parkland" target="_blank">Parkland Middles School, McHenry IL, USA</a><br />
-<span class="dates">August 2009 &ndash; June 2010</span>
-<ul>
-	<li>Design and conduct small and large group lessons for grades 6-8 P.E. classes under the supervision of mentor teacher</li>
-	<li>Participate in curriculum planning with mentor teacher</li>
-	<li>Develop and present units related to specific sports and health</li>
-	<li>Differentiate and adapt indsturction for students with special needs</li>
-	</ul>
+			<h4>ESL Teacher</h4>
+			<a class="link" href="https://www.hldes.tc.edu.tw/home" target="_blank">Huludun Elementary School, Taiwan</a><br />
+			<span class="dates">August 2011 &ndash; June 2013</span>
+			<ul>
+				<li>Routinely plan and coordinate with co-teachers daily lesson plans across all primary grade levels</li>
+				<li>Generate fun and instructional Power Points, worksheets, and activities to have a variety of means for students to practice and learn English vocabulary and grammar.</li>
+				<li>Assist with the preparation for the Taichung English Song Competition- 2nd Place</li>
+				<li>Coach and train students for the Taichung Speech Competition </li>
+			</ul>
 	
+			<h4>ESL Teacher</h4>
+			<a class="link" href="https://www.hldes.tc.edu.tw/home" target="_blank">Daecheon Girls' Middle School, South Korea</a><br />
+			<span class="dates">August 2010 &ndash; June 2011</span>
+			<ul>
+				<li>Designed and implemented hands-on and appealing lessons to supplement the English textbook content to appropriate age groups</li>
+				<li>Maintain interests of students while engaging them in English language production</li>
+				<li>Coach students for provincial wide Enlglish competitions such as the Speech Competition, Drama's Theatre and Debate </li>
+			</ul>
 
-</section>
-<hr />
+			<h4>Director of Sports and Adventure Camp/ Assistant to Preschool Camp</h4>
+			<a class="link" href="https://saltcreek.multisportsystems.com/page/show/6810-home" target="_blank">Salt Creek Rural Park Disctict, Palatine IL, USA</a><br />
+			<span class="dates">Summer 2010</span>
+			<ul>
+				<li>Supervised and trained all new camp counselors</li>
+				<li>Communicated daily with parents</li>
+				<li>Created, setup and evaluated all daily acitivites and games</li>
+				<li>Coordinated and secured all outside field trips</li>
+			</ul>
 
-<section>
-<h3>Education & Credential</h3>
-<h4><a class="link" href="https://www.neiu.edu" target="_blank">Northeastern Illinois University</a></h4>
-<span>Bachelor of Arts, Physical Education, Cum Laude</span><br />
-<span class="dates">2007 &ndash; 2009</span>
-
-<h4><a class="link" href="https://www.harpercollege.edu/index.php" target="_blank">William Rainey Harper College</a></h4>
-<span>Associates Degree, Liberal Arts</span><br />
-<span class="dates">2004 &ndash; 2006</span>
-
-
-
-<h4 style="font-weight: 300;"><a class="link" href="https://www.isbe.net/Pages/Educator-Licensure-Information-System.aspx" target="_blank"><i>Illinois Teaching Licensure #2387208</i>
+			<h4>At-Risk Preschool Assistant</h4><a class="link" href="https://ardmore.asd4.org" target="_blank">Ardmore Elementary School, Addison IL, USA</a><br />
+			<span class="dates">August 2009 &ndash; June 2010</span>
+			<ul>
+				<li>Assist classroom teacher with all activites for at-risk students, including 1:1 and small group academic support, find and gross morot acitivites and social/emotional development</li>
+				<li>Independently facilitate learning centers that include literacy, math and functional management plans</li>
+				<li>Provide consistency and structure of daily acitivities while incorporating behavior management plans</li>
+				<li>Supervise classroom independently during meal times, bathroom, outdoor play, etc.</li>
+			</ul>
 	
-</a></h4>
-<h4 style="margin-top: 1px; text-decoration: underline;"><i>ODL QC, 120-Hour TEFL Certificate #2016895</i></h4>
-<h4 style="margin-top: 1px; text-decoration:underline"><i>PDA, Ceritified Positive Dicipline Facilitator</i></h4>
+			<h4>Student Teaching</h4><a class="link" href="https://www.d15.org/parkland" target="_blank">Parkland Middles School, McHenry IL, USA</a><br />
+			<span class="dates">August 2009 &ndash; June 2010</span>
+			<ul>
+				<li>Design and conduct small and large group lessons for grades 6-8 P.E. classes under the supervision of mentor teacher</li>
+				<li>Participate in curriculum planning with mentor teacher</li>
+				<li>Develop and present units related to specific sports and health</li>
+				<li>Differentiate and adapt indsturction for students with special needs</li>
+			</ul>
+		</section>
+	
+		<hr/>
 
-</section>
+		<section>
+			<h3>Education & Credential</h3>
+			<h4><a class="link" href="https://www.neiu.edu" target="_blank">Northeastern Illinois University</a></h4>
+			<span>Bachelor of Arts, Physical Education, Cum Laude</span><br />
+			<span class="dates">2007 &ndash; 2009</span>
 
-<hr />
-<section>
-<h3>Professsional Development and Skills</h3>
-<p>2019 Posiitive Dicipline Association, <i>Certified Positive Dicipline Facilitator</i></br>
-2018 EARCOS, <i>Unpacking Inclusion</i></br> 
-2017 CPD College, <i>Jolly Phonics</i></br>
-2017 ELG Shanghai, <i>Meta-Cognitive Classroom Strategies</i></br> 
-2017 ELG Shanghai, <i>Bilingualism in the Classroom</i></br> 
-2017 ELG Shanghai, <i>Sensory Learning</i></br> 
+			<h4><a class="link" href="https://www.harpercollege.edu/index.php" target="_blank">William Rainey Harper College</a></h4>
+			<span>Associates Degree, Liberal Arts</span><br />
+			<span class="dates">2004 &ndash; 2006</span>
 
 
 
+			<h4 style="font-weight: 300;"><a class="link" href="https://www.isbe.net/Pages/Educator-Licensure-Information-System.aspx" target="_blank"><i>Illinois Teaching Licensure #2387208</i></a></h4>
 
-</p>
+			<h4 style="margin-top: 1px; text-decoration: underline;"><i>ODL QC, 120-Hour TEFL Certificate #2016895</i></h4>
+			<h4 style="margin-top: 1px; text-decoration:underline"><i>PDA, Ceritified Positive Dicipline Facilitator		</i></h4>
 
+		</section>
 
+		<hr />
+		<section>
+			<h3>Professsional Development and Skills</h3>
+			<p>2019 Posiitive Dicipline Association, <i>Certified Positive Dicipline Facilitator</i></br>
+				2018 EARCOS, <i>Unpacking Inclusion</i></br> 
+				2017 CPD College, <i>Jolly Phonics</i></br>
+				2017 ELG Shanghai, <i>Meta-Cognitive Classroom Strategies</i></br> 
+				2017 ELG Shanghai, <i>Bilingualism in the Classroom</i></br> 
+				2017 ELG Shanghai, <i>Sensory Learning</i></br> 
+			</p>
+		</section>
 
-
-</section>
-
+	</div>
 </div>
-</div>
-<!-- end of CONTENT div -->
-<!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("2481406678");
-	</script>
-<script type="text/javascript">
-	    (function(h,o,t,j,a,r){
-	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-	        h._hjSettings={hjid:476785,hjsv:5};
-	        a=o.getElementsByTagName('head')[0];
-	        r=o.createElement('script');r.async=1;
-	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-	        a.appendChild(r);
-	    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 
-	</script> -->
-
-<!----<script src="scroll.js"></script>---->
 
 <script src="script.js" type="module"></script>
 
