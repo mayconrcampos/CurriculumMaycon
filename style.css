@@ -146,7 +146,19 @@ hr {
   margin: auto;
 }
 
+#tecnologiasSimbolos {
+  width: 100%;
+  padding: 5px;
+}
 
+#tecnologiasSimbolos #icones {
+  display: block;
+}
+
+#tecnologiasSimbolos #icones img {
+  padding: 5px;
+  width: 30px;
+}
 
 #box {
   margin: auto;

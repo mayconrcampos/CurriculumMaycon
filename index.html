@@ -42,6 +42,20 @@
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i> Imbituba - SC, Brasil</p>
 
+			<div id="tecnologiasSimbolos">
+				<h5>Tecnologias Principais</h5>
+				<div id="icones">
+					<img src="img/icons/python_18894.ico" >
+					<img src="img/icons/file_type_php_icon_130266.ico" >
+					<img src="img/icons/javascript_icon_130900.ico" >
+					<img src="img/icons/vuejs_original_logo_icon_146304.ico" >
+					<img src="img/icons/linux_penguin_animal_9362.ico">
+					<img src="img/icons/file_type_git_icon_130581.ico">
+					<img src="img/icons/file_type_vscode_icon_130084.ico">
+					<img src="img/icons/mysql_original_wordmark_logo_icon_146417.ico">
+					<img src="img/icons/postgresql_original_wordmark_logo_icon_146392.ico">
+				</div>
+			</div>
 
 	</div>
 
@@ -71,17 +85,23 @@
 			<p>O segundo passo que dei foi a instalação do Sistema Operacional Linux como sistema de utilização principal, instalando-o pela primeira vez em meu computador em Julho de 2019. Desde então venho estudando sobre este sistema maravilhoso, bem como tudo que é relacionado a Software Livre, distribuições linux, utilização do terminal Linux, Shell Script, gerenciadores de pacotes, permissões de acesso, manipulação de arquivos e diretórios, system inits (systemd, sys v-init), Desktop Enviroments do Linux (KDE Plasma, Gnome, XFCE, LMDE, LxQT, etc...), etc.</p>
 
 
- 			<p>Adorei todos os novos conhecimentos adquiridos por vários cursos, e-books e tutoriais pela internet, tudo de forma autodidata. Mas foi no início de 2020 que resolvi iniciar o curso Superior em Análise e Desenvolvimento de Sistemas, pelo <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Tudo isto afim de prover minha formação regular e iniciar uma carreira nesta área.</p>
+ 			<p>Foi através do estudo autodidata que adquiri conhecimento sobre as mais diversas linguagens e tecnologias, porém senti que seria hora de me aprofundar mais e escolher um caminho. Então no início de 2020 resolvi iniciar o curso Superior em Análise e Desenvolvimento de Sistemas, pelo <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Tudo isto afim de prover minha formação e construir uma base sólida de conhecimentos.</p>
 
-			 <p>Desde então venho estudando e adquirindo conhecimentos por meio da Universidade Unicesumar e também por vários outros cursos, tanto gratuitos como pagos, onde fui adquirindo conhecimentos e habilidades sobre diversas linguagens de programação e tecnologias, entre as quais:</p>
+			 <p>Abaixo segue uma lista de tecnologias as quais já estudei por meios autodidatas e também por intermédio da Universidade.</p>
 
 			 <div id="divlista">
 				<ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
 					<li :style="chave % 2 == 0 ? 'background-color: darkgray;' : 'background-color: #eee;'"><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
 				</ul>
 			 </div>
+			 <br>
+			 <h3>Preferência pelo Desenvolvimento Web - Front e Backend</h3>
+			 
+			 <p>No entanto, desde meu <a href="#projetos">primeiro projeto profissional Web com PHP</a>, venho me identificando e centrando bastante meus estudos para o ramo de Desenvolvimento Web.</p>
 			 <br><br>
 			 <hr>
+
+
 			 
 		</section>
 
@@ -93,7 +113,7 @@
 			<h4><a class="link" href="https://www.unicesumar.edu.br/home/" target="_blank">Centro Universitário de Maringá - Unicesumar</a></h4>
 			<span>Superior em Análise e Desenvolvimento de Sistemas</span><br />
 			<span>Carga Horária &ndash; 2412 horas</span><br>
-			<span class="dates">Início Fevereiro de 2020 &ndash; Previsão de conclusão - Julho de 2022</span>
+			<span class="dates">Início &ndash; Fevereiro de 2020 &ndash; Previsão de conclusão - Julho de 2022</span>
 
 			<br><br>
 			<hr />
@@ -106,9 +126,9 @@
 
 			<h4><a href="https://cursos.sesisenai.org.br/" target="_blank">SESC/SENAI - Serviço Nacional de Aprendizagem Industrial</a></h4>
 			<span>Curso - DEVinHouse[ConectaNuvem]</span><br/><br>
-			<span>Tecnologias: HTML5, CSS3, JavaScript, VueJS, Python, Flask, SQL e NoSQL, Scrum, DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
+			<span>Tecnologias: HTML5, CSS3, JavaScript, POO, VueJS, Python, Flask, SQL e NoSQL, Scrum, DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
 			<span>Carga Horária &ndash; 900 horas</span><br>
-			<span class="dates">Início &ndash; 28/Fev/2022 &ndash; Previsão de conclusão - 18/Nov/2022</span>
+			<span class="dates">Início &ndash; Fevereiro de 2022 &ndash; Previsão de conclusão - Novembro de 2022</span>
 			
 		</section>
 		
@@ -163,7 +183,7 @@
 
 			<hr>
 
-			<h3>Projetos Pessoais</h3><br>
+			<h3>Projetos Pessoais em Python</h3><br>
 
 			<h3>Projeto OS Fácil v1.0</h3>
 			
@@ -212,7 +232,7 @@
 
 			<h4>Descrição do projeto</h4>
 			<p>Este programa foi a evolução das duas primeiras versões OS Fácil.</p>
-			<p>Assim como na segunda versão, esta foi reescrita do zero, mas desta vez utilizando a biblioteca gráfica GTK3 e seu construtor de interfaces sensacional chamado Glade. O programa continuou contando com banco de dados SQlite3 e o gerador de PDF pra impressão das Ordens de Serviço.</p>
+			<p>Assim como na segunda versão, esta foi reescrita do zero, mas desta vez utilizando a biblioteca gráfica PyGTK3 e seu construtor de interfaces sensacional chamado Glade. O programa continuou contando com banco de dados SQlite3 e o gerador de PDF pra impressão das Ordens de Serviço.</p>
 			<div id="IMGs02">
 				<a target="_blank" href="./img/OSFacilV3-01.jpg"><img src="./img/OSFacilV3-01.jpg" alt="OSFácilV3"></a>
 				<a target="_blank" href="./img/OSFacilV3-02.jpg"><img src="./img/OSFacilV3-02.jpg" alt="OSFácilV3"></a>
@@ -228,7 +248,7 @@
 				<li>Paradigma: POO</li>
 				<li>Linguagem: Python 3.8.5 64bits</li>
 				<li>Banco de Dados: SQlite3</li>
-				<li>Biblioteca gráfica: GTK3</li>
+				<li>Biblioteca gráfica: PyGTK3</li>
 				<li>Construtor de Interface: Glade 3.36</li>
 				<li>Gerador de PDF: Biblioteca Reportlab</li>
 				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v3" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
