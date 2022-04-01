@@ -57,11 +57,13 @@
 	
 
 	<p id="content">
+
+	
 		
 		<!------ Conteúdo que exibe Sobre ------->
 
 		<section class="top">
-  			<h3 id="sobre">Sobre mim</h3>
+  			<h3 id="sobre">Sobre</h3>
 				<br>
 			<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de Imbituba - SC desde 2015.</p>
 			<p>Apesar de sempre ter sido ligado à tecnologia utilizando e explorando computadores desde a pré-adolescência, decidi dar o primeiro passo e iniciei meus estudos pra valer em tecnologia no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi ao assistir as aulas fantásticas do canal <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no Youtube, com o curso de Python Fundamentos (Módulos 1, 2 e 3) do prof. Gustavo Guanabara.</p>
@@ -69,17 +71,45 @@
 			<p>O segundo passo que dei foi a instalação do Sistema Operacional Linux como sistema de utilização principal, instalando-o pela primeira vez em meu computador em Julho de 2019. Desde então venho estudando sobre este sistema maravilhoso, bem como tudo que é relacionado a Software Livre, distribuições linux, utilização do terminal Linux, Shell Script, gerenciadores de pacotes, permissões de acesso, manipulação de arquivos e diretórios, system inits (systemd, sys v-init), Desktop Enviroments do Linux (KDE Plasma, Gnome, XFCE, LMDE, LxQT, etc...), etc.</p>
 
 
- 			<p>Adorei todos os novos conhecimentos adquiridos por vários cursos, e-books e tutoriais pela internet, tudo de forma autodidata. Mas foi no início de 2020 que resolvi iniciar o curso Superior em Análise e Desenvolvimento de Sistemas, pelo <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Previsão para formatura será para Agosto/2022. Tudo isto afim de prover minha formação regular e iniciar uma carreira nesta área.</p>
+ 			<p>Adorei todos os novos conhecimentos adquiridos por vários cursos, e-books e tutoriais pela internet, tudo de forma autodidata. Mas foi no início de 2020 que resolvi iniciar o curso Superior em Análise e Desenvolvimento de Sistemas, pelo <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Tudo isto afim de prover minha formação regular e iniciar uma carreira nesta área.</p>
 
-			 <p>Desde então venho estudando e adquirindo conhecimentos por meio da Universidade Unicesumar e também por vários outros cursos, tanto gratuitos como pagos, onde foram estudadas diversas linguagens de programação e tecnologias, entre as quais:</p>
+			 <p>Desde então venho estudando e adquirindo conhecimentos por meio da Universidade Unicesumar e também por vários outros cursos, tanto gratuitos como pagos, onde fui adquirindo conhecimentos e habilidades sobre diversas linguagens de programação e tecnologias, entre as quais:</p>
 
 			 <div id="divlista">
 				<ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
 					<li :style="chave % 2 == 0 ? 'background-color: darkgray;' : 'background-color: #eee;'"><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
 				</ul>
 			 </div>
+			 <br><br>
+			 <hr>
 			 
-			 
+		</section>
+
+		<!------ Conteúdo que exibe a Graduação -------->		
+
+		<section id="graduacao">
+			<h3>Curso Superior - Graduação</h3>
+
+			<h4><a class="link" href="https://www.unicesumar.edu.br/home/" target="_blank">Centro Universitário de Maringá - Unicesumar</a></h4>
+			<span>Superior em Análise e Desenvolvimento de Sistemas</span><br />
+			<span>Carga Horária &ndash; 2412 horas</span><br>
+			<span class="dates">Início Fevereiro de 2020 &ndash; Previsão de conclusão - Julho de 2022</span>
+
+			<br><br>
+			<hr />
+		</section>
+
+		<!----- Conteúdo que exibe os cursos Extra Curriculares ------->
+
+		<section id="cursoTecnico">
+			<h3>Curso Técnico de Capacitação</h3>
+
+			<h4><a href="https://cursos.sesisenai.org.br/" target="_blank">SESC/SENAI - Serviço Nacional de Aprendizagem Industrial</a></h4>
+			<span>Curso - DEVinHouse[ConectaNuvem]</span><br/><br>
+			<span>Tecnologias: HTML5, CSS3, JavaScript, VueJS, Python, Flask, SQL e NoSQL, Scrum, DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
+			<span>Carga Horária &ndash; 900 horas</span><br>
+			<span class="dates">Início &ndash; 28/Fev/2022 &ndash; Previsão de conclusão - 18/Nov/2022</span>
+			
 		</section>
 		
 		<!------- Container que exibe experiência profissional ---------->
@@ -240,38 +270,7 @@
 			<hr>
 		</section>
 	
-		<!------ Conteúdo que exibe a Graduação -------->		
-
-		<section id="graduacao">
-			<h3>Curso Superior - Graduação</h3>
-			<h4><a class="link" href="https://www.neiu.edu" target="_blank">Centro Universitário de Maringá - Unicesumar</a></h4>
-			<span>Superior em Análise e Desenvolvimento de Sistemas</span><br />
-			<span class="dates">2020 &ndash; Julho de 2022</span>
-
-			<h4><a class="link" href="https://www.harpercollege.edu/index.php" target="_blank">William Rainey Harper College</a></h4>
-			<span>Associates Degree, Liberal Arts</span><br />
-			<span class="dates">2004 &ndash; 2006</span>
-
-
-			<h4 style="font-weight: 300;"><a class="link" href="https://www.isbe.net/Pages/Educator-Licensure-Information-System.aspx" target="_blank"><i>Illinois Teaching Licensure #2387208</i></a></h4>
-
-			<h4 style="margin-top: 1px; text-decoration: underline;"><i>ODL QC, 120-Hour TEFL Certificate #2016895</i></h4>
-			<h4 style="margin-top: 1px; text-decoration:underline"><i>PDA, Ceritified Positive Dicipline Facilitator		</i></h4>
-		<hr />
-		</section>
-
-		<!----- Conteúdo que exibe os cursos Extra Curriculares ------->
-
-		<section id="cursosExtras">
-			<h3>Professsional Development and Skills</h3>
-			<p>2019 Posiitive Dicipline Association, <i>Certified Positive Dicipline Facilitator</i></br>
-				2018 EARCOS, <i>Unpacking Inclusion</i></br> 
-				2017 CPD College, <i>Jolly Phonics</i></br>
-				2017 ELG Shanghai, <i>Meta-Cognitive Classroom Strategies</i></br> 
-				2017 ELG Shanghai, <i>Bilingualism in the Classroom</i></br> 
-				2017 ELG Shanghai, <i>Sensory Learning</i></br> 
-			</p>
-		</section>
+		
 	</p>
 	
 </div>

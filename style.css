@@ -138,6 +138,16 @@ hr {
   text-align: justify;
 }
 
+#graduacao {
+  margin: auto;
+}
+
+#cursoTecnico {
+  margin: auto;
+}
+
+
+
 #box {
   margin: auto;
   position: absolute;
