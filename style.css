@@ -16,17 +16,17 @@ body {
 }
 
 .IMGs {
-  display: block;
+  display: flex;
   width: 100%;
 }
 .IMGs a {
-  width: 50%;
+  width: 40%;
   margin: auto;
   text-align: center;
 }
 .IMGs a img{
   width: 150px;
-  margin: 10px;
+  margin: 5px;
 }
 
 
@@ -110,12 +110,7 @@ hr {
 
 }
 
-#projetos #linkimg #imgsistemaportaria {
-  display: flex;
-  width: 40%;
-  margin: auto;
-  border: 2px solid black;
-}
+
 
 #projetos {
   margin: auto;
@@ -124,6 +119,18 @@ hr {
 #projetos p{
   font-size: smaller;
   text-align: justify;
+}
+
+#projetoEstagio{
+  margin: auto;
+  
+}
+
+#projetoEstagio a img {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  border: 2px solid black;
 }
 
 #graduacao {
