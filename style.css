@@ -78,6 +78,7 @@ hr {
 
 .top {
   margin: auto;
+
 }
 
 .top p {
@@ -87,7 +88,9 @@ hr {
 }
 
 #experiencia {
+  font-size: smaller;
   margin: auto;
+  text-align: justify;
 }
 
 #experiencia p {
@@ -113,7 +116,10 @@ hr {
 
 
 #projetos {
+  border: 1px solid black;
+  font-size: smaller;
   margin: auto;
+  text-align: justify;
 }
 
 #projetos p{
@@ -122,7 +128,10 @@ hr {
 }
 
 #projetoEstagio{
+  font-size: smaller;
   margin: auto;
+  text-align: justify;
+
   
 }
 
@@ -130,18 +139,26 @@ hr {
   display: flex;
   width: 40%;
   margin: auto;
-  border: 2px solid black;
 }
 
 #graduacao {
+  font-size: smaller;
   margin: auto;
+  text-align: justify;
+  
+
 }
 
 #cursoTecnico {
+  font-size: smaller;
   margin: auto;
+  text-align: justify;
+
 }
 
 #cursosExtras {
+  text-align: center;
+  font-size: smaller;
   margin: auto;
 }
 
@@ -417,6 +434,7 @@ li {
 
 #header {
   display: flex;
+  font-size: smaller;
   width: 100%;
   margin: 0;
   background: rgb(246,246,246);
@@ -432,17 +450,15 @@ li {
   top: 0;
   display: flex;
   width: 100%;
-  margin: auto;
   text-align: right;
   right: 0;
-  margin-left: 10%;
+  margin-left: 10px;
 }
 
 #header ul li{
-  text-align: left;
-  width: 20%;
+  text-align: center;
   list-style: none;
-  padding: 10px;
+  margin-right: 20px;
 }
 
 #header ul li a {
