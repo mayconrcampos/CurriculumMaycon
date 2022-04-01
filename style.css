@@ -73,7 +73,6 @@ hr {
 
 #content {
   display: block;
-  border: 2px solid black;  
 }
 
 .top {
@@ -94,9 +93,22 @@ hr {
 }
 
 #experiencia p {
-  font-size: smaller;
   text-align: justify;
   
+}
+
+#projetoEstagio{
+  font-size: smaller;
+  margin: auto;
+  text-align: justify;
+
+  
+}
+
+#projetoEstagio a img {
+  display: flex;
+  width: 40%;
+  margin: auto;
 }
 
 #projetos .creditosSistemaPortaria {
@@ -127,19 +139,7 @@ hr {
   text-align: justify;
 }
 
-#projetoEstagio{
-  font-size: smaller;
-  margin: auto;
-  text-align: justify;
 
-  
-}
-
-#projetoEstagio a img {
-  display: flex;
-  width: 40%;
-  margin: auto;
-}
 
 #graduacao {
   font-size: smaller;
