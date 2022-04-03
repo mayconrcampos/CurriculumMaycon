@@ -24,7 +24,7 @@
 	  			  <div class="progress-bar" id="myBar"></div>
 	  			</div> 
 			</div>
-		<img class="headshot" src="./img/maycon.jpg" />
+		<img class="headshot" :src="foto_avatar" />
 		<h1>{{ nome }}</h1>
 		<h2>DEV FullStack em Formação - SENAI DEVinHouse[ConectaNuvem]</h2>
 
@@ -40,7 +40,7 @@
 			<li><a target="_blank" href="https://whats.link/5548984443857"> <i class="fa fa-whatsapp fa-xs"></i></a></li>
 
 		</ul>
-			<p class="small"><i class="fa fa-map-marker"></i> Imbituba - SC, Brasil</p>
+			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
 
 			<div id="tecnologiasSimbolos">
 				<h5>Tecnologias Principais</h5>
@@ -85,7 +85,7 @@
 		<section class="top">
   			<h3 id="sobre">Sobre</h3>
 				<br>
-			<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de Imbituba - SC desde 2015.</p>
+			<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de {{ location }} desde 2015.</p>
 			<p>Apesar de sempre ter sido ligado à tecnologia utilizando e explorando computadores desde a pré-adolescência, decidi dar o primeiro passo e iniciei meus estudos pra valer em tecnologia no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi ao assistir as aulas fantásticas do canal <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no Youtube, com o curso de Python Fundamentos (Módulos 1, 2 e 3) do prof. Gustavo Guanabara.</p>
 
 			<p>O segundo passo que dei foi a instalação do Sistema Operacional Linux como sistema de utilização principal, instalando-o pela primeira vez em meu computador em Julho de 2019. Desde então venho estudando sobre este sistema maravilhoso, bem como tudo que é relacionado a Software Livre, distribuições linux, utilização do terminal Linux, Shell Script, gerenciadores de pacotes, permissões de acesso, manipulação de arquivos e diretórios, system inits (systemd, sys v-init), Desktop Enviroments do Linux (KDE Plasma, Gnome, XFCE, LMDE, LxQT, etc...), etc.</p>
