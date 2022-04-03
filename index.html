@@ -63,7 +63,8 @@
 	</div>
 
 	<transition name="slide-fade">
-		<div v-if="!fecha && telaWidth > 700" id="header">
+		<div v-if="telaWidth >= 700 && !fecha" id="header">
+			
 			<ul>
 				<li><a href="#content">Sobre</a></li>
 				<li><a href="#graduacao">Graduação</a></li>
@@ -73,8 +74,6 @@
 				<li><a href="#projetoEstagio">Projeto Estágio</a></li>
 				<li><a href="#projetosPython">Projetos em Python</a></li>
 				<li><a href="#projetosphp">Projetos em PHP</a></li>
-
-
 			</ul>
 			
 		</div>
@@ -109,7 +108,7 @@
 
 		<transition name="slide-fade">
 			<section v-if="!fecha" class="top">
-
+				<br><br>
   				<h3 id="sobre">Sobre</h3>
 					<br>
 				<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de {{ location }} desde 2015.</p>
@@ -142,6 +141,7 @@
 
 		<transition name="slide-fade">
 			<section v-if="!fecha" id="graduacao">
+				<br>
 				<h3>Curso Superior - Graduação</h3>
 
 				<h4><a class="link" href="https://www.unicesumar.edu.br/home/" target="_blank">Centro Universitário de Maringá - Unicesumar</a></h4>
@@ -158,6 +158,7 @@
 		
 		<transition name="slide-fade">
 			<section v-if="!fecha" id="cursoTecnico">
+				<br>
 				<h3>Curso Técnico de Capacitação</h3>
 
 				<h4><a href="https://cursos.sesisenai.org.br/" target="_blank">SESC/SENAI - Serviço Nacional de Aprendizagem Industrial</a></h4>
@@ -177,6 +178,7 @@
 
 		<transition name="slide-fade">
 			<section v-if="!fecha" id="cursosExtras">
+				<br>
 				<h3>Cursos Extra Curriculares</h3>
 
 				<h4><a href="https://www.datascienceacademy.com.br/" target="_blank">Data Science Academy</a></h4>
@@ -383,6 +385,7 @@
 
 		<transition name="slide-fade">
 			<section v-if="!fecha" id="projetoEstagio">
+				<br>
 				<h3>Projeto de Estágio - Controle de Entrada e Saída de Veículos</h3>
 
 					<span class="dates">Julho de 2021 &ndash; Agosto de 2021</span>
@@ -408,8 +411,10 @@
 					<br><br>
 
 				<hr>
-				
-				<h3 id="projetosPython">Projetos Pessoais em Python</h3><br>
+				<div id="projetosPython"></div><br><br><br>
+
+				<h3 >Projetos Pessoais em Python</h3>
+				<br>
 
 				<h3>Projeto OS Fácil v1.0</h3>
 				
@@ -538,8 +543,8 @@
 				<br><br>
 
 				<hr>
-
-				<h3 id="projetosphp">Projetos Pessoais em PHP</h3><br><br>
+				<div id="projetosphp"></div><br><br><br>
+				<h3>Projetos Pessoais em PHP</h3><br><br>
 
 
 				<h3>Projeto Controle de Finanças v1.0</h3>
