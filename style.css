@@ -176,6 +176,64 @@ hr {
   width: 30px;
 }
 
+#listRepositorios {
+  width: 80%;
+  flex-flow: wrap;
+  padding: 20px;
+  margin: auto;
+  background-color: lightgrey;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 8px 10px black;
+  
+}
+
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.slide-fade-enter-active {
+  transition: all 0.8s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+#headerListaRepositorios {
+  display: flex;
+  text-align: center;
+}
+
+#headerListaRepositorios h2 {
+  width: 100%;
+}
+
+#headerListaRepositorios a {
+  margin-right: 10px;
+}
+
+#listRepositorios ul {
+  margin: auto;
+}
+
+#listRepositorios ul li {
+
+  color: #eee;
+  font-size: smaller;
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+}
+
 #box {
   margin: auto;
   position: absolute;

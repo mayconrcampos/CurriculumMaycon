@@ -41,6 +41,8 @@
 
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
+			
+			<a @click.prevent="fecha = true" href=""><i class="fa fa-github-square fa-xs"></i> <small>Lista de Repositórios Github</small></a>
 
 			<div id="tecnologiasSimbolos">
 				<h5>Tecnologias Principais</h5>
@@ -61,7 +63,7 @@
 
 	<div id="header">
 		<ul>
-			<li><a href="#content">Sobre</a></li>
+			<li><a @click.prevent="fecha = !true" href="#content">Sobre</a></li>
 			<li><a href="#graduacao">Graduação</a></li>
 			<li><a href="#cursoTecnico">Curso Técnico</a></li>
 			<li><a href="#cursosExtras">Cursos Extras</a></li>
@@ -78,537 +80,559 @@
 
 	<div id="content">
 
+		<transition name="slide-fade">
+			<div v-if="fecha" id="listRepositorios">
+				<div id="headerListaRepositorios">
+					<h2>Lista de Repositórios Github</h2>
+					<a @click.prevent="fecha = false" href="#">X</a>
+				</div>
+				<ul v-for="(item, key) in repositorios">
+					<li>
+						<h4><i class="fa fa-github-square fa-xs"></i> {{key+1}}  Repositório: {{item.full_name}}</h4>
+						<p><strong>URL: </strong><a target="_blank" :href="item.html_url"> {{item.html_url}}</a></p>
+						<p><strong>Linguagem: </strong>{{ item.language }}</p>
+					</li>
+				</ul>
+			</div>
+		</transition>
+
 	
 		
 		<!------ Conteúdo que exibe Sobre ------->
 
-		<section class="top">
-  			<h3 id="sobre">Sobre</h3>
-				<br>
-			<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de {{ location }} desde 2015.</p>
-			<p>Apesar de sempre ter sido ligado à tecnologia utilizando e explorando computadores desde a pré-adolescência, decidi dar o primeiro passo e iniciei meus estudos pra valer em tecnologia no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi ao assistir as aulas fantásticas do canal <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no Youtube, com o curso de Python Fundamentos (Módulos 1, 2 e 3) do prof. Gustavo Guanabara.</p>
+		<transition name="slide-fade">
+			<section v-if="!fecha" class="top">
 
-			<p>O segundo passo que dei foi a instalação do Sistema Operacional Linux como sistema de utilização principal, instalando-o pela primeira vez em meu computador em Julho de 2019. Desde então venho estudando sobre este sistema maravilhoso, bem como tudo que é relacionado a Software Livre, distribuições linux, utilização do terminal Linux, Shell Script, gerenciadores de pacotes, permissões de acesso, manipulação de arquivos e diretórios, system inits (systemd, sys v-init), Desktop Enviroments do Linux (KDE Plasma, Gnome, XFCE, LMDE, LxQT, etc...), etc.</p>
+  				<h3 id="sobre">Sobre</h3>
+					<br>
+				<p>Olá, meu nome é Maycon, sou casado, tenho {{idade}} anos, nasci na cidade de Florianópolis e moro na cidade de {{ location }} desde 2015.</p>
+				<p>Apesar de sempre ter sido ligado à tecnologia utilizando e explorando computadores desde a pré-adolescência, decidi dar o primeiro passo e iniciei meus estudos pra valer em tecnologia no início de 2019. Meu primeiro contato com linguagem e lógica de programação foi ao assistir as aulas fantásticas do canal <a target="_blank" href="https://www.youtube.com/c/CursoemV%C3%ADdeo">Curso em Vídeo</a> no Youtube, com o curso de Python Fundamentos (Módulos 1, 2 e 3) do prof. Gustavo Guanabara.</p>
 
-
- 			<p>Foi através do estudo autodidata que adquiri conhecimento sobre as mais diversas linguagens e tecnologias, porém senti que seria hora de me aprofundar mais e escolher um caminho. Então no início de 2020 resolvi iniciar o curso Superior em Análise e Desenvolvimento de Sistemas, pelo <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Tudo isto afim de prover minha formação e construir uma base sólida de conhecimentos.</p>
-
-			 <p>Abaixo segue uma lista de tecnologias as quais já estudei por meios autodidatas e também por intermédio da Universidade.</p>
-
-			 <div id="divlista">
-				<ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
-					<li :style="chave % 2 == 0 ? 'background-color: darkgray;' : 'background-color: #eee;'"><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
-				</ul>
-			 </div>
-			 <br>
-			 <h4>Preferência pelo Desenvolvimento Web - Front e Backend</h4><br>
-			 
-			 <p>No entanto, desde meu <a href="#projetoEstagio">primeiro projeto profissional Web com PHP</a>, venho me identificando e centrando bastante meus estudos para o ramo de Desenvolvimento Web.</p>
-			 <br><br>
-			 <hr>
+				<p>O segundo passo que dei foi a instalação do Sistema Operacional Linux como sistema de utilização principal, instalando-o pela primeira vez em meu computador em Julho de 2019. Desde então venho estudando sobre este sistema maravilhoso, bem como tudo que é relacionado a Software Livre, distribuições linux, utilização do terminal Linux, Shell Script, gerenciadores de pacotes, permissões de acesso, manipulação de arquivos e diretórios, system inits (systemd, sys v-init), Desktop Enviroments do Linux (KDE Plasma, Gnome, XFCE, LMDE, LxQT, etc...), etc.</p>
 
 
-			 
-		</section>
+ 				<p>Foi através do estudo autodidata que adquiri conhecimento sobre as mais diversas linguagens e tecnologias, porém senti que seria hora de me aprofundar mais e escolher um caminho. Então no início de 2020 resolvi iniciar o curso Superior em Análise e Desenvolvimento de Sistemas, pelo <a href="https://www.unicesumar.edu.br/home/">{{ universidade }}</a>. Tudo isto afim de prover minha formação e construir uma base sólida de conhecimentos.</p>
 
+				 <p>Abaixo segue uma lista de tecnologias as quais já estudei por meios autodidatas e também por intermédio da Universidade.</p>
+
+				 <div id="divlista">
+					<ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
+						<li :style="chave % 2 == 0 ? 'background-color: darkgray;' : 'background-color: #eee;'"><i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
+					</ul>
+				 </div>
+				 <br>
+				 <h4>Preferência pelo Desenvolvimento Web - Front e Backend</h4><br>
+
+				 <p>No entanto, desde meu <a href="#projetoEstagio">primeiro projeto profissional Web com PHP</a>, venho me identificando e centrando bastante meus estudos para o ramo de Desenvolvimento Web.</p>
+				 <br><br>
+				 <hr>
+
+
+
+			</section>
+		</transition>
 		<!------ Conteúdo que exibe a Graduação -------->		
 
-		<section id="graduacao">
-			<h3>Curso Superior - Graduação</h3>
+		<transition name="slide-fade">
+			<section v-if="!fecha" id="graduacao">
+				<h3>Curso Superior - Graduação</h3>
 
-			<h4><a class="link" href="https://www.unicesumar.edu.br/home/" target="_blank">Centro Universitário de Maringá - Unicesumar</a></h4>
-			<span>Superior em Análise e Desenvolvimento de Sistemas</span><br />
-			<span>Carga Horária &ndash; 2412 horas</span><br>
-			<span class="dates">Início &ndash; Fevereiro de 2020 &ndash; Previsão de conclusão - Julho de 2022</span>
+				<h4><a class="link" href="https://www.unicesumar.edu.br/home/" target="_blank">Centro Universitário de Maringá - Unicesumar</a></h4>
+				<span>Superior em Análise e Desenvolvimento de Sistemas</span><br />
+				<span>Carga Horária &ndash; 2412 horas</span><br>
+				<span class="dates">Início &ndash; Fevereiro de 2020 &ndash; Previsão de conclusão - Julho de 2022</span>
 
-			<br><br>
-			<hr />
-		</section>
+				<br><br>
+				<hr />
+			</section>
+		</transition>
+		
+		<!----- Conteúdo que exibe os cursos Extra Curriculares ------->
+		
+		<transition name="slide-fade">
+			<section v-if="!fecha" id="cursoTecnico">
+				<h3>Curso Técnico de Capacitação</h3>
+
+				<h4><a href="https://cursos.sesisenai.org.br/" target="_blank">SESC/SENAI - Serviço Nacional de Aprendizagem Industrial</a></h4>
+				<span>Curso - DEVinHouse[ConectaNuvem]</span><br/><br>
+				<span>Tecnologias: HTML5, CSS3, JavaScript, POO, VueJS, Python, Flask, SQL e NoSQL, Scrum, DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
+				<span>Carga Horária &ndash; 900 horas</span><br>
+				<span class="dates">Início &ndash; Fevereiro de 2022 &ndash; Previsão de conclusão - Novembro de 2022</span>
+
+				<br><br>
+				<hr>
+			</section>
+		</transition>
+
 
 		<!----- Conteúdo que exibe os cursos Extra Curriculares ------->
 
-		<section id="cursoTecnico">
-			<h3>Curso Técnico de Capacitação</h3>
 
-			<h4><a href="https://cursos.sesisenai.org.br/" target="_blank">SESC/SENAI - Serviço Nacional de Aprendizagem Industrial</a></h4>
-			<span>Curso - DEVinHouse[ConectaNuvem]</span><br/><br>
-			<span>Tecnologias: HTML5, CSS3, JavaScript, POO, VueJS, Python, Flask, SQL e NoSQL, Scrum, DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
-			<span>Carga Horária &ndash; 900 horas</span><br>
-			<span class="dates">Início &ndash; Fevereiro de 2022 &ndash; Previsão de conclusão - Novembro de 2022</span>
+		<transition name="slide-fade">
+			<section v-if="!fecha" id="cursosExtras">
+				<h3>Cursos Extra Curriculares</h3>
+
+				<h4><a href="https://www.datascienceacademy.com.br/" target="_blank">Data Science Academy</a></h4>
+				<span>Curso - Big Data Fundamentos 3.0</span><br/><br>
 			
-			<br><br>
-			<hr>
-		</section>
+				<span>Carga Horária &ndash; 12 horas</span><br>
+				<span class="dates">Concluído em &ndash; 14 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/certificate-big-data-fundamentos-30-60ec7800e32fc38b555ace1e.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
 
-		<!----- Conteúdo que exibe os cursos Extra Curriculares ------->
 
-		<section id="cursosExtras">
-			<h3>Cursos Extra Curriculares</h3>
-
-			<h4><a href="https://www.datascienceacademy.com.br/" target="_blank">Data Science Academy</a></h4>
-			<span>Curso - Big Data Fundamentos 3.0</span><br/><br>
-		
-			<span>Carga Horária &ndash; 12 horas</span><br>
-			<span class="dates">Concluído em &ndash; 14 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/certificate-big-data-fundamentos-30-60ec7800e32fc38b555ace1e.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
+				<h4><a href="https://www.nodestudio.com.br/" target="_blank">Node Studio</a></h4>
+				<span>PHP Orientado a Objetos</span><br/><br>
 			
-			<h4><a href="https://www.nodestudio.com.br/" target="_blank">Node Studio</a></h4>
-			<span>PHP Orientado a Objetos</span><br/><br>
-		
-			<span>Carga Horária &ndash; 2 horas</span><br>
-			<span class="dates">Concluído em &ndash; 13 Agosto de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Certificado - Curso de PHP Orientado a Objetos - 58784608.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
+				<span>Carga Horária &ndash; 2 horas</span><br>
+				<span class="dates">Concluído em &ndash; 13 Agosto de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Certificado - Curso de PHP Orientado a Objetos - 58784608.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
+				<span>Curso de Python 3 - Mundo 1 - Fundamentos</span><br/><br>
 			
+				<span>Carga Horária &ndash; 40 horas</span><br>
+				<span class="dates">Concluído em &ndash; 30 Julho de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Maycon Campos - Python 3 Mundo 1 [40 Horas] - Certificado - Curso em Vídeo.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
 
-			<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
-			<span>Curso de Python 3 - Mundo 1 - Fundamentos</span><br/><br>
-		
-			<span>Carga Horária &ndash; 40 horas</span><br>
-			<span class="dates">Concluído em &ndash; 30 Julho de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Maycon Campos - Python 3 Mundo 1 [40 Horas] - Certificado - Curso em Vídeo.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-			<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
-			<span>Curso de MySQL - Fundamentos</span><br/><br>
-		
-			<span>Carga Horária &ndash; 40 horas</span><br>
-			<span class="dates">Concluído em &ndash; 29 Janeiro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Maycon-Campos-MySQL-40-Horas-Certificado-Curso-em-Video.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-			<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
-			<span>Curso de JavaScript - Fundamentos</span><br/><br>
-		
-			<span>Carga Horária &ndash; 40 horas</span><br>
-			<span class="dates">Concluído em &ndash; 06 Novembro de 2020</span><br>
-			<a target="_blank" href="./img/certificados/Maycon-Campos-Javascript-40-Horas-Certificado-Curso-em-Video.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-			<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
-			<span>Curso de HTML e CSS - Módulo 1 de 5</span><br/><br>
-		
-			<span>Carga Horária &ndash; 40 horas</span><br>
-			<span class="dates">Concluído em &ndash; 21 Janeiro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Maycon-Campos-Curso-HTML5-e-CSS3-modulo-1-de-5-40-HORAS-Certificado-Curso-em-Video.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-			<h4><a href="https://celke.com.br/" target="_blank">Celke Cursos</a></h4>
-			<span>Curso de PHP, MySQLi e Bootstrap4</span><br/><br>
-		
-			<span>Carga Horária &ndash; 100 horas</span><br>
-			<span class="dates">Concluído em &ndash; 01 Abril de 2022</span><br>
-			<a target="_blank" href="./img/certificados/Curso PHP e Mysql - 100horas.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Arquitetura de Sistemas avançado</span><br/><br>
-		
-			<span>Carga Horária &ndash; 3 horas</span><br>
-			<span class="dates">Concluído em &ndash; 15 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Arquitetura de Sistemas Avançado.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Conceitos e melhores práticas com bancos de dados PostgreSQL</span><br/><br>
-		
-			<span>Carga Horária &ndash; 9 horas</span><br>
-			<span class="dates">Concluído em &ndash; 26 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Conceitos e melhores práticas com PostgreSQL.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Formulários com condicionais e Sessões com PHP</span><br/><br>
-		
-			<span>Carga Horária &ndash; 5 horas</span><br>
-			<span class="dates">Concluído em &ndash; 19 Setembro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Formularios com Condicionais e Sessoes PHP.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Fundamentos de Arquitetura de Sistemas</span><br/><br>
-		
-			<span>Carga Horária &ndash; 6 horas</span><br>
-			<span class="dates">Concluído em &ndash; 15 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Fundamentos de Arquiteturas de Sistemas.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Introdução a orquestração de conteineres com Docker</span><br/><br>
-		
-			<span>Carga Horária &ndash; 4 horas</span><br>
-			<span class="dates">Concluído em &ndash; 17 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Introd a Docker.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Introdução a Git e Github</span><br/><br>
-		
-			<span>Carga Horária &ndash; 5 horas</span><br>
-			<span class="dates">Concluído em &ndash; 27 Setembro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Introd Git e Github.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Introdução ao MongoDB e bancos de dados NoSQL</span><br/><br>
-		
-			<span>Carga Horária &ndash; 6 horas</span><br>
-			<span class="dates">Concluído em &ndash; 03 Novembro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Introd MongoDB e NoSQL.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Introdução a programação com Python</span><br/><br>
-		
-			<span>Carga Horária &ndash; 8 horas</span><br>
-			<span class="dates">Concluído em &ndash; 05 Novembro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Introd Python.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Linux: A introdução ao Sistema Operacional</span><br/><br>
-		
-			<span>Carga Horária &ndash; 10 horas</span><br>
-			<span class="dates">Concluído em &ndash; 13 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Introducao ao Linux.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Shell Script: Manipulando Arquivos</span><br/><br>
-		
-			<span>Carga Horária &ndash; 2 horas</span><br>
-			<span class="dates">Concluído em &ndash; 13 Outubro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - Introdução ao Shell Script.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-			<hr>
-
-
-			<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
-			<span>Explorando o poder do NoSQL com Cassandra e DBase</span><br/><br>
-		
-			<span>Carga Horária &ndash; 4 horas</span><br>
-			<span class="dates">Concluído em &ndash; 03 Novembro de 2021</span><br>
-			<a target="_blank" href="./img/certificados/Digital Innovation One - NoSQL com Cassandra e DBase.pdf"><i class="fa fa-certificate"></i> Certificado</a>
-			<br>
-
-
-
-
+				<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
+				<span>Curso de MySQL - Fundamentos</span><br/><br>
 			
+				<span>Carga Horária &ndash; 40 horas</span><br>
+				<span class="dates">Concluído em &ndash; 29 Janeiro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Maycon-Campos-MySQL-40-Horas-Certificado-Curso-em-Video.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
 
-		</section>
-		
+				<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
+				<span>Curso de JavaScript - Fundamentos</span><br/><br>
+			
+				<span>Carga Horária &ndash; 40 horas</span><br>
+				<span class="dates">Concluído em &ndash; 06 Novembro de 2020</span><br>
+				<a target="_blank" href="./img/certificados/Maycon-Campos-Javascript-40-Horas-Certificado-Curso-em-Video.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+				<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
+				<span>Curso de HTML e CSS - Módulo 1 de 5</span><br/><br>
+			
+				<span>Carga Horária &ndash; 40 horas</span><br>
+				<span class="dates">Concluído em &ndash; 21 Janeiro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Maycon-Campos-Curso-HTML5-e-CSS3-modulo-1-de-5-40-HORAS-Certificado-Curso-em-Video.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+				<h4><a href="https://celke.com.br/" target="_blank">Celke Cursos</a></h4>
+				<span>Curso de PHP, MySQLi e Bootstrap4</span><br/><br>
+			
+				<span>Carga Horária &ndash; 100 horas</span><br>
+				<span class="dates">Concluído em &ndash; 01 Abril de 2022</span><br>
+				<a target="_blank" href="./img/certificados/Curso PHP e Mysql - 100horas.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Arquitetura de Sistemas avançado</span><br/><br>
+			
+				<span>Carga Horária &ndash; 3 horas</span><br>
+				<span class="dates">Concluído em &ndash; 15 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Arquitetura de Sistemas Avançado.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Conceitos e melhores práticas com bancos de dados PostgreSQL</span><br/><br>
+			
+				<span>Carga Horária &ndash; 9 horas</span><br>
+				<span class="dates">Concluído em &ndash; 26 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Conceitos e melhores práticas com PostgreSQL.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Formulários com condicionais e Sessões com PHP</span><br/><br>
+			
+				<span>Carga Horária &ndash; 5 horas</span><br>
+				<span class="dates">Concluído em &ndash; 19 Setembro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Formularios com Condicionais e Sessoes PHP.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Fundamentos de Arquitetura de Sistemas</span><br/><br>
+			
+				<span>Carga Horária &ndash; 6 horas</span><br>
+				<span class="dates">Concluído em &ndash; 15 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Fundamentos de Arquiteturas de Sistemas.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Introdução a orquestração de conteineres com Docker</span><br/><br>
+			
+				<span>Carga Horária &ndash; 4 horas</span><br>
+				<span class="dates">Concluído em &ndash; 17 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Introd a Docker.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Introdução a Git e Github</span><br/><br>
+			
+				<span>Carga Horária &ndash; 5 horas</span><br>
+				<span class="dates">Concluído em &ndash; 27 Setembro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Introd Git e Github.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Introdução ao MongoDB e bancos de dados NoSQL</span><br/><br>
+			
+				<span>Carga Horária &ndash; 6 horas</span><br>
+				<span class="dates">Concluído em &ndash; 03 Novembro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Introd MongoDB e NoSQL.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Introdução a programação com Python</span><br/><br>
+			
+				<span>Carga Horária &ndash; 8 horas</span><br>
+				<span class="dates">Concluído em &ndash; 05 Novembro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Introd Python.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Linux: A introdução ao Sistema Operacional</span><br/><br>
+			
+				<span>Carga Horária &ndash; 10 horas</span><br>
+				<span class="dates">Concluído em &ndash; 13 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Introducao ao Linux.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Shell Script: Manipulando Arquivos</span><br/><br>
+			
+				<span>Carga Horária &ndash; 2 horas</span><br>
+				<span class="dates">Concluído em &ndash; 13 Outubro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - Introdução ao Shell Script.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+				<hr>
+
+
+				<h4><a href="https://www.dio.me/" target="_blank">Digital Innovation One</a></h4>
+				<span>Explorando o poder do NoSQL com Cassandra e DBase</span><br/><br>
+			
+				<span>Carga Horária &ndash; 4 horas</span><br>
+				<span class="dates">Concluído em &ndash; 03 Novembro de 2021</span><br>
+				<a target="_blank" href="./img/certificados/Digital Innovation One - NoSQL com Cassandra e DBase.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+				<br>
+
+			</section>
+		</transition>
 		
 		<!------- Container que exibe experiência profissional ---------->
 
+		<transition name="slide-fade">
+			<section v-if="!fecha" id="experiencia">
+				<hr/>
+				<h3>Experiência no ramo de T.I</h3>
+				<br>
 
-		<section id="experiencia">
-			<hr/>
-			<h3>Experiência no ramo de T.I</h3>
-			<br>
-			
-			
-				<h2 class="summary">Estágio de Suporte em T.I</h2>
-			
 
-			<a class="link" target="_blank" href="https://portodeimbituba.com.br/">Empresa: SCPar - Porto de Imbituba</a><br />
-			<span class="dates">Maio de 2021 &ndash; Presente</span>
-			<h5>Atribuições do cargo:</h5>
-			<ul v-for="(item, key) in atribuicoesEstagio">
-				<li>{{ item }}</li>
-			</ul> 
+					<h2 class="summary">Estágio de Suporte em T.I</h2>
 
-			<hr>
-		</section>
+
+				<a class="link" target="_blank" href="https://portodeimbituba.com.br/">Empresa: SCPar - Porto de Imbituba</a><br />
+				<span class="dates">Maio de 2021 &ndash; Presente</span>
+				<h5>Atribuições do cargo:</h5>
+				<ul v-for="(item, key) in atribuicoesEstagio">
+					<li>{{ item }}</li>
+				</ul> 
+
+				<hr>
+			</section>
+		</transition>
 
 		<!--------- Conteúdo que exibe os Projetos ----------->
 
-		<section id="projetoEstagio">
-			<h3>Projeto de Estágio - Controle de Entrada e Saída de Veículos</h3>
-				
-				<span class="dates">Julho de 2021 &ndash; Agosto de 2021</span>
-				<!-- <p class="details">Tickermachine is a proprietary algorithmic trading firm specializing in cryptocurrencies, forex, and ETFs. We use low-frequency long-only strategies based on technical analysis and behavioral economics principles.</p> -->
-			
-			<h4>Descrição do projeto</h4>
-			<p>Tudo começou no dia que fomos atender a um chamado na portaria 1, onde um computador reiniciava todas as vezes em que o usuário abria a planilha excel a qual fazia todo o controle de entrada e saída de veículos. Verificamos que a planilha já se encontrava com 100 mil linhas e já ocupava em torno de 100mb do disco rígido do computador. Imaginei que se houvesse um sistema utilizando banco de dados relacional seria bem melhor, então meu gestor me desafiou a escrever este sistema. Mas ele queria que fosse escrito em PHP, Bootstrap, e que utilizasse bancos de dados MySQL. Nunca havia escrito nada em PHP, então imediatamente comecei a estudar esta linguagem e duas semanas depois iniciei o projeto. Sendo este meu primeiro projeto de utilização profissional de minha carreira.</p>
-			<p class="creditosSistemaPortaria">Backend e parte do Frontend: {{ nome }} - Estagiário</p>
-			<p class="creditosSistemaPortaria">Frontend Revisão e melhorias: Giovani Machado - Estagiário</p>
+		<transition name="slide-fade">
+			<section v-if="!fecha" id="projetoEstagio">
+				<h3>Projeto de Estágio - Controle de Entrada e Saída de Veículos</h3>
 
-				<a id="linkimg" target="_blank" href="./img/sistemaportaria.png"><img id="imgsistemaportaria" src="./img/sistemaportaria.png" alt="sistemaportaria"></a>
-		
+					<span class="dates">Julho de 2021 &ndash; Agosto de 2021</span>
+					<!-- <p class="details">Tickermachine is a proprietary algorithmic trading firm specializing in cryptocurrencies, forex, and ETFs. We use low-frequency long-only strategies based on technical analysis and behavioral economics principles.</p> -->
+
+				<h4>Descrição do projeto</h4>
+				<p>Tudo começou no dia que fomos atender a um chamado na portaria 1, onde um computador reiniciava todas as vezes em que o usuário abria a planilha excel a qual fazia todo o controle de entrada e saída de veículos. Verificamos que a planilha já se encontrava com 100 mil linhas e já ocupava em torno de 100mb do disco rígido do computador. Imaginei que se houvesse um sistema utilizando banco de dados relacional seria bem melhor, então meu gestor me desafiou a escrever este sistema. Mas ele queria que fosse escrito em PHP, Bootstrap, e que utilizasse bancos de dados MySQL. Nunca havia escrito nada em PHP, então imediatamente comecei a estudar esta linguagem e duas semanas depois iniciei o projeto. Sendo este meu primeiro projeto de utilização profissional de minha carreira.</p>
+				<p class="creditosSistemaPortaria">Backend e parte do Frontend: {{ nome }} - Estagiário</p>
+				<p class="creditosSistemaPortaria">Frontend Revisão e melhorias: Giovani Machado - Estagiário</p>
+
+					<a id="linkimg" target="_blank" href="./img/sistemaportaria.png"><img id="imgsistemaportaria" src="./img/sistemaportaria.png" alt="sistemaportaria"></a>
+			
+					<ul>
+						<h4>Tecnologias Utilizadas</h4><br>
+						<li>Paradigma: Estruturado</li>
+						<li>Framework: Nenhum</li>
+						<li>PHP 7</li>
+						<li>Bootstrap 4</li>
+						<li>CSS 3</li>
+						<li>Banco de Dados MySQL</li>
+						<li><a class="link" href="https://github.com/mayconrcampos/SistemaPortaria" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+					</ul>
+					<br><br>
+
+				<hr>
+				
+				<h3 id="projetosPython">Projetos Pessoais em Python</h3><br>
+
+				<h3>Projeto OS Fácil v1.0</h3>
+				
+				<span class="dates">Março 2020 &ndash; Abril 2020</span>
+
+				<h4>Descrição do projeto</h4>
+				<p>Este pequeno projeto infelizmente não possuo o print da tela, mas felizmente não tinha muito o que mostrar, pois ele funcionava em um Menu em Loop infinito pelo terminal. O programa foi batizado de OS Fácil por ter me servido para resolver um problema real de meu dia a dia. Eu tinha uma estamparia de sublimação e nas épocas de movimento, quando surgiam muitas ordens de serviço, todas as anotações eram feitas em papel, e muitas informações se perdiam.</p>
+				<p>Então foi aí que tive a ideia de escrever este programa em Python pra rodar pelo terminal e utilizando como bancos de dados o SQlite3.</p>
 				<ul>
 					<h4>Tecnologias Utilizadas</h4><br>
 					<li>Paradigma: Estruturado</li>
-					<li>Framework: Nenhum</li>
-					<li>PHP 7</li>
-					<li>Bootstrap 4</li>
-					<li>CSS 3</li>
-					<li>Banco de Dados MySQL</li>
-					<li><a class="link" href="https://github.com/mayconrcampos/SistemaPortaria" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+					<li>Linguagem: Python</li>
+					<li>Banco de Dados: SQlite3</li>
+					<li>Gerava arquivos TXT's com a Ordem de Serviço para impressão.</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v1" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul> <br><br>
+
+				<hr>
+
+
+				<h3>Projeto OS Fácil v2.0</h3>
+
+				<span class="dates">Junho 2020 &ndash; Junho 2020</span>
+
+				<h4>Descrição do projeto</h4>
+				<p>Esta foi a segunda versão do OSFácil, mas desta vez utilizando interface gráfica com a biblioteca padrão de Python, Tkinter. O programa seguiu os mesmos princípios da primeira versão, mas melhorado.</p>
+				<div class="IMGs">
+					<a target="_blank" href="./img/OsFacilv2.jpg"><img src="./img/OsFacilv2.jpg" alt="OSFácilV2"></a>
+					<a target="_blank" href="./img/OsFacilv2-01.jpg"><img src="./img/OsFacilv2-01.jpg" alt="OSFácilV3"></a>
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: POO</li>
+					<li>Linguagem: Python</li>
+					<li>Banco de Dados: SQlite3</li>
+					<li>Gerava arquivos PDF para impressão das Ordens de Serviço. (Biblioteca: Reportlab)</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Sistema-OS-Facil-v2" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
 				</ul>
 				<br><br>
 
-			<hr>
-			
-			<h3 id="projetosPython">Projetos Pessoais em Python</h3><br>
+				<hr>
 
-			<h3>Projeto OS Fácil v1.0</h3>
-			
-			<span class="dates">Março 2020 &ndash; Abril 2020</span>
+				<h3>Projeto OS Fácil v3.0</h3>
 
-			<h4>Descrição do projeto</h4>
-			<p>Este pequeno projeto infelizmente não possuo o print da tela, mas felizmente não tinha muito o que mostrar, pois ele funcionava em um Menu em Loop infinito pelo terminal. O programa foi batizado de OS Fácil por ter me servido para resolver um problema real de meu dia a dia. Eu tinha uma estamparia de sublimação e nas épocas de movimento, quando surgiam muitas ordens de serviço, todas as anotações eram feitas em papel, e muitas informações se perdiam.</p>
-			<p>Então foi aí que tive a ideia de escrever este programa em Python pra rodar pelo terminal e utilizando como bancos de dados o SQlite3.</p>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: Estruturado</li>
-				<li>Linguagem: Python</li>
-				<li>Banco de Dados: SQlite3</li>
-				<li>Gerava arquivos TXT's com a Ordem de Serviço para impressão.</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v1" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul> <br><br>
+				<span class="dates">Agosto 2020 &ndash; Setembro 2020</span>
 
-			<hr>
-			
+				<h4>Descrição do projeto</h4>
+				<p>Este programa foi a evolução das duas primeiras versões OS Fácil.</p>
+				<p>Assim como na segunda versão, esta foi reescrita do zero, mas desta vez utilizando a biblioteca gráfica PyGTK3 e seu construtor de interfaces sensacional chamado Glade. O programa continuou contando com banco de dados SQlite3 e o gerador de PDF pra impressão das Ordens de Serviço.</p>
+				<div class="IMGs">
+					<a target="_blank" href="./img/OSFacilV3-01.jpg"><img src="./img/OSFacilV3-01.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-02.jpg"><img src="./img/OSFacilV3-02.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-03.jpg"><img src="./img/OSFacilV3-03.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-04.jpg"><img src="./img/OSFacilV3-04.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-05.jpg"><img src="./img/OSFacilV3-05.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-06.jpg"><img src="./img/OSFacilV3-06.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-07.jpg"><img src="./img/OSFacilV3-07.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/OSFacilV3-08.jpg"><img src="./img/OSFacilV3-08.jpg" alt="OSFácilV3"></a>
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: POO</li>
+					<li>Linguagem: Python 3.8.5 64bits</li>
+					<li>Banco de Dados: SQlite3</li>
+					<li>Biblioteca gráfica: PyGTK3</li>
+					<li>Construtor de Interface: Glade 3.36</li>
+					<li>Gerador de PDF: Biblioteca Reportlab</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v3" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul>
+				<br><br>
 
-			<h3>Projeto OS Fácil v2.0</h3>
-			
-			<span class="dates">Junho 2020 &ndash; Junho 2020</span>
-
-			<h4>Descrição do projeto</h4>
-			<p>Esta foi a segunda versão do OSFácil, mas desta vez utilizando interface gráfica com a biblioteca padrão de Python, Tkinter. O programa seguiu os mesmos princípios da primeira versão, mas melhorado.</p>
-			<div class="IMGs">
-				<a target="_blank" href="./img/OsFacilv2.jpg"><img src="./img/OsFacilv2.jpg" alt="OSFácilV2"></a>
-				<a target="_blank" href="./img/OsFacilv2-01.jpg"><img src="./img/OsFacilv2-01.jpg" alt="OSFácilV3"></a>
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: POO</li>
-				<li>Linguagem: Python</li>
-				<li>Banco de Dados: SQlite3</li>
-				<li>Gerava arquivos PDF para impressão das Ordens de Serviço. (Biblioteca: Reportlab)</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-OS-Facil-v2" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
-
-			<hr>
-
-			<h3>Projeto OS Fácil v3.0</h3>
-			
-			<span class="dates">Agosto 2020 &ndash; Setembro 2020</span>
-
-			<h4>Descrição do projeto</h4>
-			<p>Este programa foi a evolução das duas primeiras versões OS Fácil.</p>
-			<p>Assim como na segunda versão, esta foi reescrita do zero, mas desta vez utilizando a biblioteca gráfica PyGTK3 e seu construtor de interfaces sensacional chamado Glade. O programa continuou contando com banco de dados SQlite3 e o gerador de PDF pra impressão das Ordens de Serviço.</p>
-			<div class="IMGs">
-				<a target="_blank" href="./img/OSFacilV3-01.jpg"><img src="./img/OSFacilV3-01.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-02.jpg"><img src="./img/OSFacilV3-02.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-03.jpg"><img src="./img/OSFacilV3-03.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-04.jpg"><img src="./img/OSFacilV3-04.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-05.jpg"><img src="./img/OSFacilV3-05.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-06.jpg"><img src="./img/OSFacilV3-06.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-07.jpg"><img src="./img/OSFacilV3-07.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/OSFacilV3-08.jpg"><img src="./img/OSFacilV3-08.jpg" alt="OSFácilV3"></a>
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: POO</li>
-				<li>Linguagem: Python 3.8.5 64bits</li>
-				<li>Banco de Dados: SQlite3</li>
-				<li>Biblioteca gráfica: PyGTK3</li>
-				<li>Construtor de Interface: Glade 3.36</li>
-				<li>Gerador de PDF: Biblioteca Reportlab</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Sistema-Os-Facil-v3" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
-
-			<hr>
+				<hr>
 
 
-			<h3>Projeto Controle de Gastos</h3>
-			
-			<span class="dates">Julho 2020 &ndash; Julho 2020</span>
+				<h3>Projeto Controle de Gastos</h3>
 
-			<h4>Descrição do projeto</h4>
-			
-			<p>A ideia deste projeto surgiu, pois estava procurando por opções de programas de gerenciamento financeiro, mas não estava me adaptando com aqueles disponíveis Open Source, que na verdade são ótimos, mas eu achava um pouco complicado de utilizar. Então resolvi escrever um gerenciador que fosse simples e direto ao ponto. As contas eram dispostas em Abas, Entrada, Saída e balanço dos gastos. Eram listadas todas as contas do mês, na virada a lista era zerada restando apenas o total daquele mês que passou e um relatório pra consultas posteriores.</p>
-			<div class="IMGs">
-				<a target="_blank" href="./img/Financeiro01.jpg"><img src="./img/Financeiro01.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/Financeiro02.jpg"><img src="./img/Financeiro02.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/Financeiro03.jpg"><img src="./img/Financeiro03.jpg" alt="OSFácilV3"></a>
-				<a target="_blank" href="./img/Financeiro04.jpg"><img src="./img/Financeiro04.jpg" alt="OSFácilV3"></a>
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: POO</li>
-				<li>Linguagem: Python 3.8.5 64bits</li>
-				<li>Banco de Dados: SQlite3</li>
-				<li>Biblioteca gráfica: Tkinter</li>
-				<li>Gráficos: Biblioteca Matplotlib</li>
-				<li>PDF: Biblioteca Reportlab</li>
-		
-				<li><a class="link" href="https://github.com/mayconrcampos/Projeto-Controle-de-Gastos" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
+				<span class="dates">Julho 2020 &ndash; Julho 2020</span>
 
-			<hr>
+				<h4>Descrição do projeto</h4>
 
-
-			<h3>Projeto Gerenciador de Aluguéis</h3>
-			
-			<span class="dates">Setembro 2020 &ndash; Outubro 2020</span>
-
-			<h4>Descrição do projeto</h4>
-			
-			<p>Este programa nasceu da necessidade em gerenciar os contratos de locação que administramos aqui no prédio. Havia certa dificuldade de manter de forma manual os dados de cada locação, bem como controlar datas de pagamento de aluguel, caução, vencimentos de contrato e tudo mais. Seguindo a evolução dos estudos, escrevi este programa em Python, utilizando a biblioteca gráfica padrão Tkinter e bancos de dados SQlite3.</p>
-			<div class="IMGs">
-				<a target="_blank" href="./img/Alugueis01.jpg"><img src="./img/Alugueis01.jpg" alt="Alugueispython"></a>
-				<a target="_blank" href="./img/Alugueis02.jpg"><img src="./img/Alugueis02.jpg" alt="Alugueispython"></a>
-				<a target="_blank" href="./img/Alugueis03.jpg"><img src="./img/Alugueis03.jpg" alt="Alugueispython"></a>
-		
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: POO</li>
-				<li>Linguagem: Python 3.8.5 64bits</li>
-				<li>Banco de Dados: SQlite3</li>
-				<li>Biblioteca gráfica: Tkinter</li>
-				<li>Gerador de PDF: Biblioteca Reportlab</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Projeto---Gerenciador-de-Alugueis" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
-
-			<hr>
-
-			<h3 id="projetosphp">Projetos Pessoais em PHP</h3><br><br>
-
-
-			<h3>Projeto Controle de Finanças v1.0</h3>
-			
-			<span class="dates">Julho 2021 &ndash; Julho 2021</span>
-
-			<h4>Descrição do projeto</h4>
-			
-			<p>Trata-se da segunda versão do Gerenciador de gastos que nasceu primeiro em Python. Agora eu já estava estudando desenvolvimento web com PHP e descobrindo a fantástica interação do Frontend com o Backend e a mágica que as tags &lt?php?&gt podem fazer dentro do documento html.</p>
-			<p>Nesta segunda versão tratei de seguir a mesma simplicidade do primeiro programa, mas como no desenvolvimento web as coisas são mais simples de se fazer, acabou que o programa ficou mais completo.</p>
-			<p>Coloquei sistema de Login com confirmação por email, entre outras funcionalidades legais. Mas o estilo de listar somente os gastos do mês corrente na tabela principal de gastos eu mantive.</p>
-			<div class="IMGs">
-				<a target="_blank" href="./img/FinanceiroPHP01.png"><img src="./img/FinanceiroPHP01.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/FinanceiroPHP02.png"><img src="./img/FinanceiroPHP02.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/FinanceiroPHP03.png"><img src="./img/FinanceiroPHP03.png" alt="financeirophp"></a>
-
-		
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: Estruturado</li>
-				<li>Linguagem: PHP7</li>
-				<li>Banco de Dados: MySQL biblioteca MySQLi</li>
-				<li>Servidor: Apache (The Apache HTTP Server)</li>
-				<li>Framework: Bootstrap4</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Controle-de-Financas" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
-
-			<hr>
-
-
-			<h3>Gerenciador de Contratos de Aluguéis v2.0</h3>
-			
-			<span class="dates">Agosto 2021 &ndash; Agosto 2021</span>
-
-			<h4>Descrição do projeto</h4>
-			
-			<p>Esta foi a segunda versão do Gerenciador de Contratos inicialmente escrito em Python, mas que agora foi reescrito do zero seguindo o mesmo flow do antigo aplicativo.</p>
-			<p>A ideia foi separar as entidades como: Locador (Dono do imóvel), Locatário: (Quem aluga) e os imóveis. A modelagem do banco dados partiu daí. O usuário inicialmente cadastra o nome do imóvel e o nome do locador, então quando houvesse um contrato de aluguel, selecionamos um locador, um locatário, um imóvel e fechamos um contrato. Ali podemos também escolher sobre pagamento de caução, se o contrato sendo fechado é curto (6 meses) ou anual bem como o dia do mês melhor para pagamento do aluguel e, como não deveria faltar, pode-se escolher também qual mês começaria a pagar o aluguel. Ao selecionar estes dados o sistema dispara um laço de repetição gerando as parcelas de meses subsequentes e insere tudo isto no banco de dados de forma automatizada.</p>
-			<p>Foi implementado também a lista das parcelas pagas/a vencer/ atrasadas, bem como emissão de recibo com preenchimento automático do valor por extenso.</p>
-		
-			<div class="IMGs">
-				<a target="_blank" href="./img/Alugueis02PHP-01.png"><img src="./img/Alugueis02PHP-01.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/Alugueis02PHP-02.png"><img src="./img/Alugueis02PHP-02.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/Alugueis02PHP-03.png"><img src="./img/Alugueis02PHP-03.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/Alugueis02PHP-04.png"><img src="./img/Alugueis02PHP-04.png" alt="financeirophp"></a>
-
-		
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: Estruturado</li>
-				<li>Linguagem: PHP7</li>
-				<li>Banco de Dados: MySQL biblioteca MySQLi</li>
-				<li>Servidor: Apache (The Apache HTTP Server)</li>
-				<li>Framework: Bootstrap4</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Controle-de-Financas" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
-
-			<hr>
-
-
-
-			<h3>Gerenciador Controle de Finanças v2.0</h3>
-			
-			<span class="dates">Setembro 2021 &ndash; Setembro 2021</span>
-
-			<h4>Descrição do projeto</h4>
-			
-			<p>Esta foi a segunda versão do Gerenciador de Finanças, mas escrito do zero e totalmente remodelado. Agora resolvi escrever com paradigma Orientado a Objetos pra fixar conhecimentos e brincar com as bibliotecas em php pra manipulação do banco de dados com a classe PDO.</p>
-			
-		
-			<div class="IMGs">
-				<a target="_blank" href="./img/FinanceiroPHP2-01.png"><img src="./img/FinanceiroPHP2-01.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/FinanceiroPHP2-02.png"><img src="./img/FinanceiroPHP2-02.png" alt="financeirophp"></a>
-				<a target="_blank" href="./img/FinanceiroPHP2-03.png"><img src="./img/FinanceiroPHP2-03.png" alt="financeirophp"></a>
+				<p>A ideia deste projeto surgiu, pois estava procurando por opções de programas de gerenciamento financeiro, mas não estava me adaptando com aqueles disponíveis Open Source, que na verdade são ótimos, mas eu achava um pouco complicado de utilizar. Então resolvi escrever um gerenciador que fosse simples e direto ao ponto. As contas eram dispostas em Abas, Entrada, Saída e balanço dos gastos. Eram listadas todas as contas do mês, na virada a lista era zerada restando apenas o total daquele mês que passou e um relatório pra consultas posteriores.</p>
+				<div class="IMGs">
+					<a target="_blank" href="./img/Financeiro01.jpg"><img src="./img/Financeiro01.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/Financeiro02.jpg"><img src="./img/Financeiro02.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/Financeiro03.jpg"><img src="./img/Financeiro03.jpg" alt="OSFácilV3"></a>
+					<a target="_blank" href="./img/Financeiro04.jpg"><img src="./img/Financeiro04.jpg" alt="OSFácilV3"></a>
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: POO</li>
+					<li>Linguagem: Python 3.8.5 64bits</li>
+					<li>Banco de Dados: SQlite3</li>
+					<li>Biblioteca gráfica: Tkinter</li>
+					<li>Gráficos: Biblioteca Matplotlib</li>
+					<li>PDF: Biblioteca Reportlab</li>
 				
+					<li><a class="link" href="https://github.com/mayconrcampos/Projeto-Controle-de-Gastos" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul>
+				<br><br>
 
-		
-			</div>
-			<ul>
-				<h4>Tecnologias Utilizadas</h4><br>
-				<li>Paradigma: POO</li>
-				<li>Linguagem: PHP7</li>
-				<li>Banco de Dados: MySQL com biblioteca PDO</li>
-				<li>Servidor: Apache (The Apache HTTP Server)</li>
-				<li>Framework: Bootstrap4 e CSS3</li>
-				<li><a class="link" href="https://github.com/mayconrcampos/Controle-de-Financas-v2" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
-			</ul>
-			<br><br>
-
-			<hr>
+				<hr>
 
 
+				<h3>Projeto Gerenciador de Aluguéis</h3>
+
+				<span class="dates">Setembro 2020 &ndash; Outubro 2020</span>
+
+				<h4>Descrição do projeto</h4>
+
+				<p>Este programa nasceu da necessidade em gerenciar os contratos de locação que administramos aqui no prédio. Havia certa dificuldade de manter de forma manual os dados de cada locação, bem como controlar datas de pagamento de aluguel, caução, vencimentos de contrato e tudo mais. Seguindo a evolução dos estudos, escrevi este programa em Python, utilizando a biblioteca gráfica padrão Tkinter e bancos de dados SQlite3.</p>
+				<div class="IMGs">
+					<a target="_blank" href="./img/Alugueis01.jpg"><img src="./img/Alugueis01.jpg" alt="Alugueispython"></a>
+					<a target="_blank" href="./img/Alugueis02.jpg"><img src="./img/Alugueis02.jpg" alt="Alugueispython"></a>
+					<a target="_blank" href="./img/Alugueis03.jpg"><img src="./img/Alugueis03.jpg" alt="Alugueispython"></a>
+				
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: POO</li>
+					<li>Linguagem: Python 3.8.5 64bits</li>
+					<li>Banco de Dados: SQlite3</li>
+					<li>Biblioteca gráfica: Tkinter</li>
+					<li>Gerador de PDF: Biblioteca Reportlab</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Projeto---Gerenciador-de-Alugueis" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul>
+				<br><br>
+
+				<hr>
+
+				<h3 id="projetosphp">Projetos Pessoais em PHP</h3><br><br>
 
 
-		</section>
-	
+				<h3>Projeto Controle de Finanças v1.0</h3>
+
+				<span class="dates">Julho 2021 &ndash; Julho 2021</span>
+
+				<h4>Descrição do projeto</h4>
+
+				<p>Trata-se da segunda versão do Gerenciador de gastos que nasceu primeiro em Python. Agora eu já estava estudando desenvolvimento web com PHP e descobrindo a fantástica interação do Frontend com o Backend e a mágica que as tags &lt?php?&gt podem fazer dentro do documento html.</p>
+				<p>Nesta segunda versão tratei de seguir a mesma simplicidade do primeiro programa, mas como no desenvolvimento web as coisas são mais simples de se fazer, acabou que o programa ficou mais completo.</p>
+				<p>Coloquei sistema de Login com confirmação por email, entre outras funcionalidades legais. Mas o estilo de listar somente os gastos do mês corrente na tabela principal de gastos eu mantive.</p>
+				<div class="IMGs">
+					<a target="_blank" href="./img/FinanceiroPHP01.png"><img src="./img/FinanceiroPHP01.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/FinanceiroPHP02.png"><img src="./img/FinanceiroPHP02.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/FinanceiroPHP03.png"><img src="./img/FinanceiroPHP03.png" alt="financeirophp"></a>
+
+				
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: Estruturado</li>
+					<li>Linguagem: PHP7</li>
+					<li>Banco de Dados: MySQL biblioteca MySQLi</li>
+					<li>Servidor: Apache (The Apache HTTP Server)</li>
+					<li>Framework: Bootstrap4</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Controle-de-Financas" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul>
+				<br><br>
+
+				<hr>
+
+
+				<h3>Gerenciador de Contratos de Aluguéis v2.0</h3>
+
+				<span class="dates">Agosto 2021 &ndash; Agosto 2021</span>
+
+				<h4>Descrição do projeto</h4>
+
+				<p>Esta foi a segunda versão do Gerenciador de Contratos inicialmente escrito em Python, mas que agora foi reescrito do zero seguindo o mesmo flow do antigo aplicativo.</p>
+				<p>A ideia foi separar as entidades como: Locador (Dono do imóvel), Locatário: (Quem aluga) e os imóveis. A modelagem do banco dados partiu daí. O usuário inicialmente cadastra o nome do imóvel e o nome do locador, então quando houvesse um contrato de aluguel, selecionamos um locador, um locatário, um imóvel e fechamos um contrato. Ali podemos também escolher sobre pagamento de caução, se o contrato sendo fechado é curto (6 meses) ou anual bem como o dia do mês melhor para pagamento do aluguel e, como não deveria faltar, pode-se escolher também qual mês começaria a pagar o aluguel. Ao selecionar estes dados o sistema dispara um laço de repetição gerando as parcelas de meses subsequentes e insere tudo isto no banco de dados de forma automatizada.</p>
+				<p>Foi implementado também a lista das parcelas pagas/a vencer/ atrasadas, bem como emissão de recibo com preenchimento automático do valor por extenso.</p>
+			
+				<div class="IMGs">
+					<a target="_blank" href="./img/Alugueis02PHP-01.png"><img src="./img/Alugueis02PHP-01.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/Alugueis02PHP-02.png"><img src="./img/Alugueis02PHP-02.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/Alugueis02PHP-03.png"><img src="./img/Alugueis02PHP-03.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/Alugueis02PHP-04.png"><img src="./img/Alugueis02PHP-04.png" alt="financeirophp"></a>
+
+				
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: Estruturado</li>
+					<li>Linguagem: PHP7</li>
+					<li>Banco de Dados: MySQL biblioteca MySQLi</li>
+					<li>Servidor: Apache (The Apache HTTP Server)</li>
+					<li>Framework: Bootstrap4</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Controle-de-Financas" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul>
+				<br><br>
+
+				<hr>
+
+
+
+				<h3>Gerenciador Controle de Finanças v2.0</h3>
+
+				<span class="dates">Setembro 2021 &ndash; Setembro 2021</span>
+
+				<h4>Descrição do projeto</h4>
+
+				<p>Esta foi a segunda versão do Gerenciador de Finanças, mas escrito do zero e totalmente remodelado. Agora resolvi escrever com paradigma Orientado a Objetos pra fixar conhecimentos e brincar com as bibliotecas em php pra manipulação do banco de dados com a classe PDO.</p>
+
+			
+				<div class="IMGs">
+					<a target="_blank" href="./img/FinanceiroPHP2-01.png"><img src="./img/FinanceiroPHP2-01.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/FinanceiroPHP2-02.png"><img src="./img/FinanceiroPHP2-02.png" alt="financeirophp"></a>
+					<a target="_blank" href="./img/FinanceiroPHP2-03.png"><img src="./img/FinanceiroPHP2-03.png" alt="financeirophp"></a>
+
+
+				
+				</div>
+				<ul>
+					<h4>Tecnologias Utilizadas</h4><br>
+					<li>Paradigma: POO</li>
+					<li>Linguagem: PHP7</li>
+					<li>Banco de Dados: MySQL com biblioteca PDO</li>
+					<li>Servidor: Apache (The Apache HTTP Server)</li>
+					<li>Framework: Bootstrap4 e CSS3</li>
+					<li><a class="link" href="https://github.com/mayconrcampos/Controle-de-Financas-v2" target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+				</ul>
+				<br><br>
+
+				<hr>
+
+
+
+
+			</section>
+		</transition>
 		
 	</div>
 	
