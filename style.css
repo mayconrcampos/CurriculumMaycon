@@ -75,6 +75,10 @@ hr {
   display: block;
 }
 
+#smallRepo {
+  cursor: pointer;
+}
+
 .top {
   margin: auto;
 
@@ -211,12 +215,12 @@ hr {
   text-align: center;
 }
 
-#headerListaRepositorios h2 {
+#headerListaRepositorios h3 {
   width: 100%;
 }
 
 #headerListaRepositorios a {
-  margin-right: 10px;
+  text-decoration: none;
 }
 
 #listRepositorios ul {

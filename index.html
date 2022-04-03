@@ -42,8 +42,9 @@
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
 			
-			<a @click.prevent="fecha = true" href=""><i class="fa fa-github-square fa-xs"></i> <small> Repositórios Github</small></a>
-
+			<small id="smallRepo" @click.prevent="fecha = true"><i class="fa fa-github-square fa-xs"></i> Repositórios Github</small>
+			
+			
 			<div id="tecnologiasSimbolos">
 				<h5>Tecnologias Principais</h5>
 				<div id="icones">
@@ -61,20 +62,23 @@
 
 	</div>
 
-	<div id="header">
-		<ul>
-			<li><a @click.prevent="fecha = !true" href="#content">Sobre</a></li>
-			<li><a href="#graduacao">Graduação</a></li>
-			<li><a href="#cursoTecnico">Curso Técnico</a></li>
-			<li><a href="#cursosExtras">Cursos Extras</a></li>
-			<li><a href="#experiencia">Experiências</a></li>
-			<li><a href="#projetoEstagio">Projeto Estágio</a></li>
-			<li><a href="#projetosPython">Projetos em Python</a></li>
-			<li><a href="#projetosphp">Projetos em PHP</a></li>
+	<transition name="slide-fade">
+		<div v-if="!fecha && telaWidth > 700" id="header">
+			<ul>
+				<li><a href="#content">Sobre</a></li>
+				<li><a href="#graduacao">Graduação</a></li>
+				<li><a href="#cursoTecnico">Curso Técnico</a></li>
+				<li><a href="#cursosExtras">Cursos Extras</a></li>
+				<li><a href="#experiencia">Experiências</a></li>
+				<li><a href="#projetoEstagio">Projeto Estágio</a></li>
+				<li><a href="#projetosPython">Projetos em Python</a></li>
+				<li><a href="#projetosphp">Projetos em PHP</a></li>
+
+
+			</ul>
 			
-			
-		</ul>
-	</div>
+		</div>
+	</transition>
 
 	
 
@@ -84,7 +88,7 @@
 			<div v-if="fecha" id="listRepositorios">
 				<div id="headerListaRepositorios">
 					<h3>Meus Repositórios Github</h3>
-					<a @click.prevent="fecha = false" href="#">X</a>
+					<a @click.prevent="fecha = false" href="#">x</a>
 				</div>
 				<ul v-for="(item, key) in repositorios">
 					<li>
