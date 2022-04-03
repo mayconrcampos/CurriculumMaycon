@@ -42,7 +42,7 @@
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
 			
-			<a @click.prevent="fecha = true" href=""><i class="fa fa-github-square fa-xs"></i> <small>Lista de Repositórios Github</small></a>
+			<a @click.prevent="fecha = true" href=""><i class="fa fa-github-square fa-xs"></i> <small> Repositórios Github</small></a>
 
 			<div id="tecnologiasSimbolos">
 				<h5>Tecnologias Principais</h5>
@@ -83,7 +83,7 @@
 		<transition name="slide-fade">
 			<div v-if="fecha" id="listRepositorios">
 				<div id="headerListaRepositorios">
-					<h2>Lista de Repositórios Github</h2>
+					<h2>Meus Repositórios Github</h2>
 					<a @click.prevent="fecha = false" href="#">X</a>
 				</div>
 				<ul v-for="(item, key) in repositorios">
