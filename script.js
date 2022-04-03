@@ -39,8 +39,27 @@ export default Vue.createApp({
         await fetch("https://api.github.com/users/mayconrcampos/repos")
         .then(resposta => resposta.json())
         .then(repos => {
+          console.log(repos)
           this.repositorios = repos
         })
+      },
+
+      formataData(data){
+        var dataFormatada = new Date(data)
+        var dia = dataFormatada.getDay()
+        var mes = dataFormatada.getMonth()
+        var ano = dataFormatada.getFullYear()
+        var hora = dataFormatada.getHours()
+        var minutos = dataFormatada.getMinutes()
+        var segundos = dataFormatada.getSeconds()
+
+        dia = dia < 10 ? "0"+dia : dia
+        mes = mes < 10 ? "0"+mes : mes
+        hora = hora < 10 ? "0"+hora : hora 
+        minutos = minutos < 10 ? "0"+minutos : minutos 
+        segundos = segundos < 10 ? "0"+segundos : segundos
+
+        return `${dia}/${mes}/${ano} - ${hora}:${minutos}:${segundos}  `
       }
       
       

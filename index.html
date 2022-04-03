@@ -83,19 +83,22 @@
 		<transition name="slide-fade">
 			<div v-if="fecha" id="listRepositorios">
 				<div id="headerListaRepositorios">
-					<h2>Meus Repositórios Github</h2>
+					<h3>Meus Repositórios Github</h3>
 					<a @click.prevent="fecha = false" href="#">X</a>
 				</div>
 				<ul v-for="(item, key) in repositorios">
 					<li>
-						<h4><i class="fa fa-github-square fa-xs"></i> {{key+1}}  Repositório: {{item.full_name}}</h4>
+						<h4><i class="fa fa-github-square fa-xs"></i> Repositório {{key+1}}: {{item.full_name}}</h4>
 						<p><strong>URL: </strong><a target="_blank" :href="item.html_url"> {{item.html_url}}</a></p>
+						<p v-if="item.description != null">{{item.description}}</p>
+						<small><strong>Criado: </strong> {{formataData(item.created_at)}} <strong> Atualizado: </strong>{{formataData(item.updated_at)}} <strong>Forked: </strong> {{ item.forks_count}}</small>
 						<p><strong>Linguagem: </strong>{{ item.language }}</p>
 					</li>
 				</ul>
 			</div>
 		</transition>
 
+		
 	
 		
 		<!------ Conteúdo que exibe Sobre ------->
