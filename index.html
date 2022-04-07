@@ -25,8 +25,8 @@
 	  			</div> 
 			</div>
 		<img class="headshot" :src="foto_avatar" />
-		<h1>{{ nome }}</h1>
-		<h2>{{ bio }}</h2>
+		<h1 v-show="nome">{{ nome }}</h1>
+		<h2 v-show="bio">{{ bio }}</h2>
 
 		<ul id="icons">
 			<!---<li><a href="qrcode.jpg" target="_blank"><i class="fa fa-wechat " ></i></a></li>---->
