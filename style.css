@@ -169,6 +169,7 @@ hr {
 #tecnologiasSimbolos {
   width: 90%;
   padding: 5px;
+  text-align: center;
 }
 
 #tecnologiasSimbolos #icones {
@@ -181,14 +182,13 @@ hr {
 }
 
 #listRepositorios {
-  width: 80%;
-  flex-flow: wrap;
-  padding: 20px;
+  width: 90%;
+  display: block;
   margin: auto;
+  padding: 40px;
   background-color: lightgrey;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 5px 8px 10px black;
   
 }
 
@@ -213,7 +213,7 @@ hr {
 #headerListaRepositorios {
   display: flex;
 
-  justify-content: space-evenly;
+  justify-content: flex-end;
   text-align: left;
 }
 
@@ -239,21 +239,23 @@ hr {
 #headerListaRepositorios small {
   font-size: xx-small;
   text-align: center;
-  
+  margin-left: 10px;
   margin-top: 20px;
 }
 
 #listRepositorios ul {
   margin: auto;
+  
 }
 
 #listRepositorios ul li {
-
+  margin: auto;
+  width: 100%;
   color: #eee;
   font-size: smaller;
   list-style: none;
-  margin: 10px;
-  padding: 10px;
+  margin-top: 10px;
+  padding: 5px;
   border-radius: 5px;
   background-color: #333;
 }

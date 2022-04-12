@@ -42,7 +42,7 @@
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
 			
-			<small id="smallRepo" @click.prevent="fecha = true"><i class="fa fa-github-square fa-xs"></i> {{public_repos}} Public repositories </small><br>
+			<small id="smallRepo" @click.prevent="!fecha ? fecha = true : fecha = false"><i class="fa fa-github-square fa-xs"></i> {{public_repos}} Public repositories </small><br>
 			
 			
 			
@@ -92,7 +92,7 @@
 					<h3>Meus Repositórios Github</h3>
 					<small class="fa fa-github"> Following {{ following }}</small>
 					<small class="fa fa-github"> Followers {{ followers }}</small>
-					<a @click.prevent="fecha = false" href="#">x</a>
+					<a @click="fecha = false" href="#">x</a>
 				</div>
 				<ul v-for="(item, key) in repositorios">
 					<li>
