@@ -116,14 +116,15 @@ hr {
   margin: auto;
 }
 
+
 #experiencia {
   font-size: smaller;
   margin: auto;
-  text-align: justify;
+  text-align: left;
 }
 
 #experiencia p {
-  text-align: justify;
+  text-align: left;
   
 }
 
