@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maycon R Campos | DEV FullStack</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <link rel="icon" href="jsisonfot.jpg">
 <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css">
@@ -24,7 +26,7 @@
 	  			  <div class="progress-bar" id="myBar"></div>
 	  			</div> 
 			</div>
-		<img class="headshot" :src="foto_avatar" />
+		<img class="headshot" :src="foto_avatar"/>
 		<h1 v-show="nome">{{ nome }}</h1>
 		<h2 v-show="bio">{{ bio }}</h2>
 
@@ -42,7 +44,7 @@
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
 			
-			<small id="smallRepo" @click.prevent="!fecha ? fecha = true : fecha = false"><i class="fa fa-github-square fa-xs"></i> {{public_repos}} Public repositories </small><br>
+			<small id="smallRepo" title="Clique pra abrir e fechar repositórios" @click.prevent="!fecha ? fecha = true : fecha = false"><i class="fa fa-github-square fa-xs"></i> {{public_repos}} Public repositories </small><br>
 			
 			
 			
@@ -653,6 +655,7 @@
 	
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="script.js" type="module"></script>
 
