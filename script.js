@@ -12,7 +12,10 @@ export default Vue.createApp({
         tecnologias: ["Python", "Linguagem C", "Linguagem C++", "Java", "PHP", "Javascript", "HTML", "CSS", "Servidor Apache", "Bootstrap",  "MySQL", "SQLite", "VueJS", "Big Data", "Paradigma Estruturado", "Programação Orientada a Objetos", "Estruturas de Dados", "API's Rest", "Versionamento Git", "Git e Github", "Linux", "Diagramas UML", "Metodologia Scrum", "continua..."],
         atribuicoesEstagio: ["Auxílio no atendimento de tickets junto ao sistema de chamados", "Auxílio na orçamentação para composição de Termos de Referência", "Auxílio nas atividades administrativas relativas à processos de compra, garantia e recebimento de mercadorias", "Auxílio na manutenção em computadores (backup, formatação, instalação de softwares, limpeza externa/interna, troca de teclado, mouse, cabo de rede, cabo de energia, montagem e configuração de um segundo monitor, instalação de projetor e outros periféricos)", "Auxílio no atendimento quanto ao uso das impressoras (atolamento de papel, troca de toner, orientação para impressão em formatos diferentes)",  "Auxílio na conferência de estoque"],
         fecha: false,
-        telaWidth: window.innerWidth
+        telaWidth: window.innerWidth,
+        following: "",
+        followers: "",
+        public_repos: ""
 
       }
     },
@@ -32,8 +35,11 @@ export default Vue.createApp({
           this.location = conteudo.location
           this.nome = conteudo.name
           this.bio = conteudo.bio
+          this.public_repos = conteudo.public_repos
+          this.following = conteudo.following
+          this.followers = conteudo.followers
         
-          //console.log(conteudo)
+          console.log(conteudo)
         })
       },
       async listaRepos(){

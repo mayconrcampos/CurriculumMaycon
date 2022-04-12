@@ -42,7 +42,9 @@
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
 			
-			<small id="smallRepo" @click.prevent="fecha = true"><i class="fa fa-github-square fa-xs"></i> Repositórios Github</small>
+			<small id="smallRepo" @click.prevent="fecha = true"><i class="fa fa-github-square fa-xs"></i> {{public_repos}} Public repositories </small><br>
+			
+			
 			
 			
 			<div id="tecnologiasSimbolos">
@@ -88,6 +90,8 @@
 			<div v-if="fecha" id="listRepositorios">
 				<div id="headerListaRepositorios">
 					<h3>Meus Repositórios Github</h3>
+					<small class="fa fa-github"> Following {{ following }}</small>
+					<small class="fa fa-github"> Followers {{ followers }}</small>
 					<a @click.prevent="fecha = false" href="#">x</a>
 				</div>
 				<ul v-for="(item, key) in repositorios">
@@ -133,8 +137,6 @@
 				 <p>No entanto, desde meu <a href="#projetoEstagio">primeiro projeto profissional Web com PHP</a>, venho me identificando e centrando bastante meus estudos para o ramo de Desenvolvimento Web.</p>
 				 <br><br>
 				 <hr>
-
-
 
 			</section>
 		</transition>
