@@ -97,6 +97,7 @@ hr {
 
 #content {
   display: block;
+  margin-top: 0;
 }
 
 #smallRepo {
