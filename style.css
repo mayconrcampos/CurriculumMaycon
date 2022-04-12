@@ -1,3 +1,5 @@
+
+
 html {
   height: 100%;
   padding: 0;
@@ -15,8 +17,23 @@ body {
   font-family: open sans, sans-serif;
 }
 
+
+.accordion-button.collapsed{
+  background-color: #444444;
+  color: whitesmoke;
+}
+
+.accordion-button[aria-expanded="true"]{
+  background-color: dimgray;
+  color: white;
+}
+
+
+
 .IMGs {
-  display: flex;
+  padding: 20px;
+  text-align: center;
+  display: block;
   width: 100%;
 }
 .IMGs a {
@@ -61,7 +78,7 @@ hr {
   background: rgb(246,246,246);
   background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(68,68,68,1) 0%);   
   position: fixed;
-  top: 10px;
+  top: 0;
   left: 0;
   width: 18em;
   height: 100%;
@@ -71,12 +88,20 @@ hr {
   color: whitesmoke;
 }
 
+#sidebar h1 {
+  font-size: larger;
+}
+#sidebar h2 {
+  font-size: smaller;
+}
+
 #content {
   display: block;
 }
 
 #smallRepo {
   cursor: pointer;
+  font-size: x-small;
 }
 
 .top {
@@ -101,16 +126,15 @@ hr {
   
 }
 
-#projetoEstagio{
+#projetoEstagio, #projetoPython{
   font-size: smaller;
   margin: auto;
   text-align: justify;
 
-  
 }
 
 #projetoEstagio a img {
-  display: flex;
+  display: block;
   width: 40%;
   margin: auto;
 }
@@ -167,7 +191,7 @@ hr {
 }
 
 #tecnologiasSimbolos {
-  width: 90%;
+  width: 100%;
   padding: 5px;
   text-align: center;
 }
@@ -178,7 +202,7 @@ hr {
 
 #tecnologiasSimbolos #icones img {
   padding: 5px;
-  width: 20px;
+  width: 30px;
 }
 
 #listRepositorios {
@@ -272,6 +296,7 @@ hr {
   padding: 2em;
   text-align: center;
   overflow: visible;
+  
 }
 img.headshot:hover {
   box-shadow: 10px 10px 20px black;
@@ -398,7 +423,7 @@ li {
   top: 0px;
   z-index: 1;
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #444444;
   left:0px;
 }
 
@@ -515,14 +540,16 @@ li {
  
   margin: 0;
 }
-
+#accordionExample {
+  border-radius: 10px;
+}
+/*
 #header {
   display: flex;
   font-size: smaller;
   width: 100%;
   margin: 0;
-  background: rgb(246,246,246);
-  background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(68,68,68,1) 0%);
+  background-color: #444444;
   color: #eee;
   position: fixed;
   left: 0;
@@ -549,7 +576,7 @@ li {
   text-decoration: none;
   color: #eee;
 }
-
+*/
 
 
 
