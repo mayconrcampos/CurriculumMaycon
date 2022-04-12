@@ -89,7 +89,7 @@
 				</div>
 				<ul v-for="(item, key) in repositorios">
 					<li>
-						<h4><i class="fa fa-github-square fa-xs"></i> Repositório {{key+1}}: {{item.full_name}}</h4>
+						<h4><i class="fa fa-github-square fa-xs"></i> Repositório {{key+1}}: {{item.name}}</h4>
 						<p><strong>URL: </strong><a target="_blank" :href="item.html_url"> {{item.html_url}}</a></p>
 						<p v-if="item.description != null">{{item.description}}</p>
 						<small><strong>Criado: </strong> {{formataData(item.created_at)}} <strong> Atualizado: </strong>{{formataData(item.updated_at)}} <strong>Forked: </strong> {{ item.forks_count}}</small>
