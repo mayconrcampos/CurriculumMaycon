@@ -14,7 +14,10 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="./style.css" rel="stylesheet" type="text/css">
 <script src="https://unpkg.com/vue@3"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
 </head>
+
 
 
 
@@ -31,17 +34,21 @@
 		<img class="headshot" :src="foto_avatar"/>
 		<h1 v-show="nome">{{ nome }}</h1>
 		<h2 v-show="bio">{{ bio }}</h2>
-
+		
+		<br>
+		<small>Contatos</small>
 		<ul id="icons">
 			<!---<li><a href="qrcode.jpg" target="_blank"><i class="fa fa-wechat " ></i></a></li>---->
 			<!-- <li><a href="http://github.com/kathyqian" target="_blank"><i class="fa fa-github-square"></i></a></li> -->
-			<li><a href="https://www.linkedin.com/in/mayconrcampos/" target="_blank"> <i class="fa fa-linkedin-square"></i></a></li>
+			<li title="LinkedIn"><a href="https://www.linkedin.com/in/mayconrcampos/" target="_blank"> <i class="fa fa-linkedin-square"></i></a></li>
 			<!-- <li><a href="http://instagram.com/kathyqian" target="_blank"><i class="fa fa-instagram"></i></a></li> -->
-			<li><a target="_blank" href="mailto:maycon.campos@gmail.com"> <i class="fa fa-envelope"></i></a></li>
+			<li title="Email - maycon.campos@gmail.com"><a target="_blank" href="mailto:maycon.campos@gmail.com"> <i class="fa fa-envelope"></i></a></li>
 
-			<li><a target="_blank" href="https://github.com/mayconrcampos"> <i class="fa fa-github-square fa-xs"></i></a></li>
+			<li title="Github"><a target="_blank" href="https://github.com/mayconrcampos"> <i class="fa fa-github-square"></i></a></li>
 
-			<li><a target="_blank" href="https://whats.link/5548984443857"> <i class="fa fa-whatsapp fa-xs"></i></a></li>
+			<li title="Me chame no Whatsapp"><a target="_blank" href="https://whats.link/5548984443857"> <i class="fa fa-whatsapp"></i></a></li>
+
+			<li title="Me chame pelo Telegram"><a target="_blank" href="https://t.me/mayconrcampos"><i class="fa  fa-telegram"></i></a></li>
 
 		</ul>
 			<p class="small"><i class="fa fa-map-marker"></i>{{ location }}</p>
@@ -54,16 +61,16 @@
 			<div id="tecnologiasSimbolos">
 				<h5>Tecnologias Principais</h5>
 				<div id="icones">
-					<img src="img/icons/python_18894.ico" >
-					<img src="img/icons/file_type_php_icon_130266.ico" >
-					<img src="img/icons/javascript_icon_130900.ico" >
-					<img src="img/icons/vuejs_original_logo_icon_146304.ico" >
-					<img src="img/icons/linux_penguin_animal_9362.ico">
-					<img src="img/icons/file_type_git_icon_130581.ico">
-					<img src="img/icons/Github_icon-icons.com_66788.ico">
-					<img src="img/icons/file_type_vscode_icon_130084.ico">
-					<img src="img/icons/mysql_original_wordmark_logo_icon_146417.ico">
-					<img src="img/icons/postgresql_original_wordmark_logo_icon_146392.ico">
+					<img title="Python" src="img/icons/python_18894.ico" >
+					<img title="PHP" src="img/icons/file_type_php_icon_130266.ico" >
+					<img title="JavaScript" src="img/icons/javascript_icon_130900.ico" >
+					<img title="Vue.JS" src="img/icons/vuejs_original_logo_icon_146304.ico" >
+					<img title="Linux" src="img/icons/linux_penguin_animal_9362.ico">
+					<img title="Git" src="img/icons/file_type_git_icon_130581.ico">
+					<img title="Github" src="img/icons/Github_icon-icons.com_66788.ico">
+					<img title="VSCode" src="img/icons/file_type_vscode_icon_130084.ico">
+					<img title="MySQL" src="img/icons/mysql_original_wordmark_logo_icon_146417.ico">
+					<img title="PostgreSQL" src="img/icons/postgresql_original_wordmark_logo_icon_146392.ico">
 				</div>
 			</div>
 
