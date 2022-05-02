@@ -94,8 +94,8 @@
 					<small class="fa fa-github"> Followers {{ followers }}</small>
 					<a @click="fecha = false" href="#">x</a>
 				</div>
-				<ul v-for="(item, key) in repositorios">
-					<li>
+				<ul v-for="(item, key) in repositorios" ::key="key" >
+					<li :class="key % 2 == 0 ? 'listaDeRepos1' : 'listaDeRepos2'">
 						<h4><i class="fa fa-github-square fa-xs"></i> Repositório {{key+1}}: {{item.name}}</h4>
 						<p><strong>URL: </strong><a target="_blank" :href="item.html_url"> {{item.html_url}}</a></p>
 						<p v-if="item.description != null">{{item.description}}</p>
@@ -245,8 +245,17 @@
 						<span>Curso de Python 3 - Mundo 1 - Fundamentos</span><br/><br>
 
 						<span>Carga Horária &ndash; 40 horas</span><br>
-						<span class="dates">Concluído em &ndash; 30 Julho de 2021</span><br>
+						<span class="dates">Concluído em &ndash; 30 Junho de 2021</span><br>
 						<a target="_blank" href="./img/certificados/Maycon Campos - Python 3 Mundo 1 [40 Horas] - Certificado - Curso em Vídeo.pdf"><i class="fa fa-certificate"></i> Certificado</a>
+						<br>
+						<hr>
+
+						<h4><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a></h4>
+						<span>Curso de Python 3 - Mundo 2 - Fundamentos</span><br/><br>
+
+						<span>Carga Horária &ndash; 40 horas</span><br>
+						<span class="dates">Concluído em &ndash; 30 Junho de 2021</span><br>
+						<a target="_blank" href="./img/certificados/Maycon Campos - Python 3 Mundo 2 [40 Horas] - Certificado - Curso em Vídeo.pdf"><i class="fa fa-certificate"></i> Certificado</a>
 						<br>
 						<hr>
 
