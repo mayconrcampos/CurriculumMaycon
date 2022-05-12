@@ -15,4 +15,4 @@
 </ul>
 
 
-Curriculum Maycon Github Pages: https://mayconrcampos.github.io/CurriculumMaycon/
+Curriculum Maycon Github Pages: <a href="https://mayconrcampos.github.io/CurriculumMaycon/" target="_blank">Acessar meu Curriculum</a>
