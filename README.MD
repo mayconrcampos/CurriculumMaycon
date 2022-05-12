@@ -1,4 +1,17 @@
-Projeto de currículum vitae... Na verdade peguei um template de um DEV chinês e estou incluindo VueJS pra tornar dinâmico a questão dos dados que em um currículo está sempre em evolução.
+<h1>Portfolio - Maycon R Campos</h1>
+
+<h3>Nele contém</h3>
+
+<ul>
+  <li>Um pequeno resumo de minha história</li>
+  <li>Dados sobre minha formação em andamento</li>
+  <li>Experiência de trabalho</li>
+  <li>Cursos capacitantes na área DEV</li>
+  <li>Projetos do estágio</li>
+  <li>Projetos pessoais</li>
+  <li>Links para meus contatos</li>
+  <li>Links para meus repositórios públicos do Github</li>
+</ul>
 
 
 Curriculum Maycon Github Pages: https://mayconrcampos.github.io/CurriculumMaycon/
