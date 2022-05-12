@@ -562,6 +562,10 @@ li {
 #accordionExample {
   border-radius: 10px;
 }
+
+#linkimg img {
+  width: 600px;
+}
 /*
 #header {
   display: flex;
