@@ -11,6 +11,7 @@
   <li>Projetos pessoais</li>
   <li>Links para meus contatos</li>
   <li>Links para meus repositórios públicos do Github</li>
+  <li>Link para meu LinkedIn</li>
 </ul>
 
 
