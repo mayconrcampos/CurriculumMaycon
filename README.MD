@@ -15,4 +15,4 @@
 </ul>
 
 
-<a href="https://mayconrcampos.github.io/CurriculumMaycon/" target="_blank">Acessar meu Curriculum</a>
+<a target="_blank" href="https://mayconrcampos.github.io/CurriculumMaycon/">Acessar meu Curriculum</a>
