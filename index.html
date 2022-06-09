@@ -177,7 +177,8 @@
 									<ul id="techs" v-for="(item, chave) in tecnologias" :key="chave">
 										<li
 											:style="chave % 2 == 0 ? 'background-color: darkgray;' : 'background-color: #eee;'">
-											<i class="fa fa-arrow-circle-right"></i> {{ item }}</li>
+											<i class="fa fa-arrow-circle-right"></i> {{ item }}
+										</li>
 									</ul>
 								</div>
 								<br>
@@ -500,11 +501,13 @@
 								<p>Professor: Gilmar Bennert Jr</p>
 								<br>
 								<h5>Descrição do projeto</h5>
-								<p>Foi proposto a construção de um sistema de Inventário e empréstimo de itens para colaboradores de uma organização. E deveríamos fazer a implementação utilizando os conceitos apresentados ao longo das aulas do módulo I com VueJS.</p><br>
+								<p>Foi proposto a construção de um sistema de Inventário e empréstimo de itens para
+									colaboradores de uma organização. E deveríamos fazer a implementação utilizando os
+									conceitos apresentados ao longo das aulas do módulo I com VueJS.</p><br>
 
 
 								<br>
-								
+
 								<p>Principais conceitos:</p>
 
 								<ul>
@@ -528,10 +531,11 @@
 								</a>
 
 								<a id="linkimg" target="_blank" href="./img/07 - Tela listagem de colaboradores.png">
-									<img class="img-fluid" src="./img/07 - Tela listagem de colaboradores.png" alt="print projeto">
+									<img class="img-fluid" src="./img/07 - Tela listagem de colaboradores.png"
+										alt="print projeto">
 								</a>
 
-								
+
 
 								<h4>Tecnologias Utilizadas</h4>
 								<ul>
@@ -541,11 +545,9 @@
 									<li>Bootstrap5</li>
 
 									<li><a href="https://github.com/mayconrcampos/DEVInventaryProject"
-											target="_blank"
-											>Acessar aplicativo</a></li>
+											target="_blank">Acessar aplicativo</a></li>
 
-									<li><a class="link"
-											href="https://github.com/mayconrcampos/DEVInventaryProject"
+									<li><a class="link" href="https://github.com/mayconrcampos/DEVInventaryProject"
 											target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
 								</ul>
 
@@ -815,6 +817,31 @@
 										class="fa fa-certificate"></i> Certificado</a>
 								<br>
 
+								<hr>
+
+
+								<h4><a href="https://www.unicesumar.edu.br/home/" target="_blank">Unicesumar</a></h4>
+								<span>Ambientação e Lógica de Programação</span><br /><br>
+
+								<span>Carga Horária &ndash; 10 horas</span><br>
+								<span class="dates">Concluído em &ndash; 09 Julho de 2021</span><br>
+								<a target="_blank"
+									href="./img/certificados/Certificado Unicesumar - Ambientacao em Lógica de Programação 10h.pdf"><i
+										class="fa fa-certificate"></i> Certificado</a>
+								<br>
+								<hr>
+
+
+								<h4><a href="https://www.unicesumar.edu.br/home/" target="_blank">Unicesumar</a></h4>
+								<span>Laboratório de Arquitetura e Redes de Computadores</span><br /><br>
+
+								<span>Carga Horária &ndash; 20 horas</span><br>
+								<span class="dates">Concluído em &ndash; 23 Abril de 2021</span><br>
+								<a target="_blank"
+									href="./img/certificados/Certificado Unicesumar - Laboratório de Arquitetura e Redes de Computadores 20hrs.pdf"><i
+										class="fa fa-certificate"></i> Certificado</a>
+								<br>
+
 							</section>
 						</div>
 					</div>
@@ -863,7 +890,7 @@
 					<h2 class="accordion-header" id="headingSix">
 						<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
 							data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-							Projeto de Estágio
+							Projetos de Estágio - Porto de Imbituba
 						</button>
 					</h2>
 					<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
@@ -905,7 +932,242 @@
 									<li>CSS 3</li>
 									<li>Banco de Dados MySQL</li>
 									<li><a class="link" href="https://github.com/mayconrcampos/SistemaPortaria"
-											target="_blank"><i class="fa fa-github"></i> Github Projeto</a></li>
+											target="_blank"><i class="fa fa-github"></i> Github Projeto (Repositório
+											privado)</a></li>
+								</ul>
+								<br><br>
+
+								<hr>
+
+								<h3>Projeto para Gerenciamento de Planos de Manutenção em Equipamentos</h3>
+								<span class="dates">Maio de 2022 &ndash; Junho de 2022</span>
+
+
+								<h4>Descrição do projeto</h4>
+								<p>Fora solicitado por parte do setor de engenharia, uma aplicação que viesse suprir a
+									necessidade de gerenciar equipamentos móveis e estacionários e seus planos de
+									manutenção.</p>
+								<p>Este controle estava sendo feito manualmente com planilhas e documentos físicos.
+									Colhemos os requisitos e iniciei as modelagens iniciais de bancos de dados e
+									front-end.</p>
+
+								<p>Alguns requisitos do projeto: </p>
+
+								<ul>
+									<li>Cadastro para usuários funcionários de empresas afiliadas.</li>
+									<li>Tela de Login de usuários.</li>
+									<li>Menu admin.</li>
+									<li>Cadastro e visualização de Art - Anotação de Responsabilidade Técnica.</li>
+									<li>Indicação para vencimento da vigência das Arts.</li>
+									<li>Cadastro e visualização de Equipamentos.</li>
+									<li>Cadastro e visualização das Empresas afiliadas.</li>
+									<li>visualização de usuários com modal para mudar nível de acesso.</li>
+									<li>Vinculação de Arts a equipamentos. (Uma Art poderá ser vinculada a 1 ou muitos
+										equipamentos).</li>
+									<li>Vinculação de Manual técnico do equipamento.</li>
+									<li>Cada usuário poderá visualizar e manipular dados cadastrados por pessoas da
+										mesma empresa que ele.</li>
+									<li>O Admin do sistema poderá ver e manipular dados de todos os equipamentos de
+										todos.</li>
+									<li>Menu perfil para troca de senha e edição de alguns dados.</li>
+									<li>Inserção, edição e visualização de planos de manutenção.</li>
+									<li>Inserção, e exclusão de observações em planos de manutenção</li>
+									<li>etc. . .</li>
+
+								</ul>
+
+								<p><strong>Programador:</strong> Maycon R. Campos</p>
+
+
+
+
+								<div class="row">
+
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Tela de cadastro" 
+											href="./img/fotosprojetoporto/01 - cadastro.png"><img class="img-fluid"
+												id="imgsistemaportaria" src="./img/fotosprojetoporto/01 - cadastro.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Tela de Login"
+											href="./img/fotosprojetoporto/02 - Login.png"><img class="img-fluid"
+												id="imgsistemaportaria" src="./img/fotosprojetoporto/02 - Login.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu principal"
+											href="./img/fotosprojetoporto/03 - Menu Principal.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/03 - Menu Principal.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu de cadastro e visualização de Arts"
+											href="./img/fotosprojetoporto/04 - Menu ART.png"><img class="img-fluid"
+												id="imgsistemaportaria" src="./img/fotosprojetoporto/04 - Menu ART.png"
+												alt="sistemaportaria"></a>
+									</div>
+								</div>
+								<div class="row mt-2">
+
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Modal art"
+											href="./img/fotosprojetoporto/05 - Menu ART Modal.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/05 - Menu ART Modal.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="menu tipo de equipamentos"
+											href="./img/fotosprojetoporto/06 - Menu Tipos de Equipamentos.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/06 - Menu Tipos de Equipamentos.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu cadastro de empresas afiliadas"
+											href="./img/fotosprojetoporto/07 - Menu Cadastro de Empresas Afiliadas.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/07 - Menu Cadastro de Empresas Afiliadas.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu admin contas de usuarios"
+											href="./img/fotosprojetoporto/08 - Menu Admin Contas Usuarios.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/08 - Menu Admin Contas Usuarios.png"
+												alt="sistemaportaria"></a>
+									</div>
+								</div>
+
+								<div class="row mt-2">
+
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu admin contas de usuário Modal editar"
+											href="./img/fotosprojetoporto/09 - Menu Admin Contas Usuarios Modal Edita.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/09 - Menu Admin Contas Usuarios Modal Edita.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu visualizar equipamentos"
+											href="./img/fotosprojetoporto/10 - Menu Visualizar Equipamentos.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/10 - Menu Visualizar Equipamentos.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Visualizar todos os dados de equipamentos"
+											href="./img/fotosprojetoporto/11 - Menu Visualizar Equipamentos - Visualizar todos dados.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/11 - Menu Visualizar Equipamentos - Visualizar todos dados.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Modal anexar ART"
+											href="./img/fotosprojetoporto/12 - Menu Visualizar Equipamentos - Modal Anexar ART.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/12 - Menu Visualizar Equipamentos - Modal Anexar ART.png"
+												alt="sistemaportaria"></a>
+									</div>
+								</div>
+
+								<div class="row mt-2">
+
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Modal para vincular ART"
+											href="./img/fotosprojetoporto/13 - Menu Visualizar Equipamentos - Modal Visualiza ART e desvincula.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/13 - Menu Visualizar Equipamentos - Modal Visualiza ART e desvincula.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Modal para desvincular ART"
+											href="./img/fotosprojetoporto/14 - Menu Visualizar Equipamentos - Modal Vincular Manual.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/14 - Menu Visualizar Equipamentos - Modal Vincular Manual.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Modal desvincular manual"
+											href="./img/fotosprojetoporto/15 - Menu Visualizar Equipamentos - Modal desVincular Manual.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/15 - Menu Visualizar Equipamentos - Modal desVincular Manual.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu visualizar planos de manutenção"
+											href="./img/fotosprojetoporto/16 - Menu Visualizar Planos Manut.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/16 - Menu Visualizar Planos Manut.png"
+												alt="sistemaportaria"></a>
+									</div>
+								</div>
+
+								<div class="row mt-2">
+
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu adicionar plano de manutenção"
+											href="./img/fotosprojetoporto/17 - Menu Adicionar Plano Manut.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/17 - Menu Adicionar Plano Manut.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu visualizar observações"
+											href="./img/fotosprojetoporto/18 - Menu Visualizar Observacoes.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/18 - Menu Visualizar Observacoes.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu adicionar observacao"
+											href="./img/fotosprojetoporto/19 - Menu Adicionar observacao.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/19 - Menu Adicionar observacao.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Modal anexar comprovante de manutenção"
+											href="./img/fotosprojetoporto/20 - Visualizar Planos Manut - Modal Anexar comprovante de manutencao.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/20 - Visualizar Planos Manut - Modal Anexar comprovante de manutencao.png"
+												alt="sistemaportaria"></a>
+									</div>
+								</div>
+
+								<div class="row mt-2">
+
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Moal visualizar ART"
+											href="./img/fotosprojetoporto/21 - Menu Arts - Modal visualizar ART pdf.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/21 - Menu Arts - Modal visualizar ART pdf.png"
+												alt="sistemaportaria"></a>
+									</div>
+									<div class="col-lg">
+										<a id="linkimg" target="_blank" title="Menu cadastro de equipamentos"
+											href="./img/fotosprojetoporto/22 - Menu Cadastrar Equipamentos.png"><img
+												class="img-fluid" id="imgsistemaportaria"
+												src="./img/fotosprojetoporto/22 - Menu Cadastrar Equipamentos.png"
+												alt="sistemaportaria"></a>
+									</div>
+								
+								</div>
+
+								<ul>
+									<h4>Tecnologias Utilizadas</h4><br>
+									<li>Paradigma: Orientado a Objetos</li>
+									<li>Framework: Laravel 9</li>
+									<li>ORM - Eloquent (Abstração para gerenciamento de bancos de dados)</li>
+									<li>Linguagem - PHP 8</li>
+									<li>Bootstrap 5</li>
+									<li>CSS 3</li>
+
+									<li><a class="link" href="https://github.com/mayconrcampos/projeto-equipamentos"
+											target="_blank"><i class="fa fa-github"></i> Github Projeto (Repositório
+											privado)</a></li>
 								</ul>
 								<br><br>
 
