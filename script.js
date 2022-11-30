@@ -33,7 +33,6 @@ export default Vue.createApp({
         await fetch(`https://api.github.com/users/${this.user}`)
         .then(resposta => resposta.json())
         .then(conteudo => {
-          console.log(conteudo)
           this.foto_avatar = conteudo.avatar_url
           this.location = conteudo.location
           this.nome = conteudo.name
