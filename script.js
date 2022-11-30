@@ -16,7 +16,8 @@ export default Vue.createApp({
         telaWidth: window.innerWidth,
         following: "",
         followers: "",
-        public_repos: ""
+        public_repos: "",
+        company: "",
 
       }
     },
@@ -32,6 +33,7 @@ export default Vue.createApp({
         await fetch(`https://api.github.com/users/${this.user}`)
         .then(resposta => resposta.json())
         .then(conteudo => {
+          console.log(conteudo)
           this.foto_avatar = conteudo.avatar_url
           this.location = conteudo.location
           this.nome = conteudo.name
@@ -39,15 +41,13 @@ export default Vue.createApp({
           this.public_repos = conteudo.public_repos
           this.following = conteudo.following
           this.followers = conteudo.followers
-        
-          console.log(conteudo)
+          this.company = conteudo.company
         })
       },
       async listaRepos(){
         await fetch("https://api.github.com/users/mayconrcampos/repos")
         .then(resposta => resposta.json())
         .then(repos => {
-          console.log(repos)
           this.repositorios = repos
         })
       },

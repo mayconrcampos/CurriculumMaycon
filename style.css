@@ -17,6 +17,14 @@ body {
   font-family: open sans, sans-serif;
 }
 
+#bio {
+  font-size: small;
+}
+
+#Company {
+  font-size: medium;
+  font-weight: bold;
+}
 
 .accordion-button.collapsed{
   background-color: #444444;
