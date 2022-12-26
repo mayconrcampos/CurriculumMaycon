@@ -238,7 +238,7 @@
 					<h2 class="accordion-header" id="headingThree">
 						<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
 							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							Curso Técnico - Capacitação
+							Curso Técnico - SENAI[DEVinHouse]
 						</button>
 					</h2>
 					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -248,11 +248,16 @@
 								<h4><a href="https://cursos.sesisenai.org.br/" target="_blank">SESC/SENAI - Serviço
 										Nacional de Aprendizagem Industrial</a></h4>
 								<span>Curso - DEVinHouse[ConectaNuvem]</span><br /><br>
-								<span>Tecnologias: HTML5, CSS3, JavaScript, POO, VueJS, Python, Flask, SQL e NoSQL,
-									Scrum, DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
-								<span>Carga Horária &ndash; 900 horas</span><br>
-								<span class="dates">Início &ndash; Fevereiro de 2022 &ndash; Previsão de conclusão -
-									Novembro de 2022</span>
+								<span>Tecnologias: HTML5, CSS3, JavaScript, POO, VueJS, Python, Flask, SQL (PostgreSQL) e NoSQL (Google Realtime Database e MongoDB), Testes de Software (Pytest (Flask Backend) e Cypress (VueJS Front-end))
+									, Metodologia ágil Scrum e KanBan com Trello, Plataforma Atlassian (Bitbucket, Jyra), DevOPS, Virtualização (Containers, Docker e Kubernetes)</span><br><br>
+								<span>Carga Horária &ndash; 900 horas/aula</span><br>
+								<span class="dates">Início &ndash; 28 de Fevereiro de 2022 &ndash; Concluído em 25 de Novembro de 2022</span>
+
+								<label for="certificado" class="w-100 mt-4 mb-4">Certificado de Conclusão</label>
+
+								<a target="_blank"
+									href="./img/certificados/novos/CERTIFICADO DEVINHOUSE - MAYCON R CAMPOS.pdf"><i
+										class="fa fa-certificate"></i> Certificado de Conclusão - SENAI DEVinHouse</a><br>
 							</section>
 						</div>
 					</div>
@@ -997,7 +1002,7 @@
 					<h2 class="accordion-header" id="headingFive">
 						<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
 							data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-							Experiência no ramo de T.I
+							Experiências de Trabalho
 						</button>
 					</h2>
 					<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
@@ -1024,8 +1029,21 @@
 								<h2 class="summary">Intern Developer - FullStack</h2>
 
 
-								<a class="link" target="_blank" href="https://portodeimbituba.com.br/">Empresa: Conecta Nuvem </a><br />
-								<span class="dates">Junho de 2022 &ndash; até o presente</span>
+								<a class="link" target="_blank" href="https://conectanuvem.com.br/">Empresa: Conecta Nuvem </a><br />
+								<span class="dates">Junho de 2022 &ndash; até 24 de Novembro de 2022</span>
+								<h5>Atribuições do cargo:</h5>
+								<ul v-for="(item, key) in atribuicoesConecta">
+									<li>{{ item }}</li>
+								</ul>
+
+								<br>
+								<hr>
+
+								<h2 class="summary">Trainee FullStack Developer</h2>
+
+
+								<a class="link" target="_blank" href="https://conectanuvem.com.br/">Empresa: Conecta Nuvem </a><br />
+								<span class="dates">Novembro de 2022 &ndash; até o presente</span>
 								<h5>Atribuições do cargo:</h5>
 								<ul v-for="(item, key) in atribuicoesConecta">
 									<li>{{ item }}</li>
